@@ -1,0 +1,261 @@
+---
+title: "Concurrent Programming - List 1"
+author: José Benardi de Souza Nunes, Gustavo Diniz Monteiro, Ruan Roberto Eloy Silveira
+output:   
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_float: yes
+---
+
+<br>
+<br>
+
+```{r, include=TRUE, results='hide', message=F, warning=FALSE}
+library(here)
+library(boot)
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+
+theme_set(theme_bw())
+```
+
+<br>
+
+***
+
+<br>
+
+# Question 1
+
+In this problem let us compare two versions of a program that's supposed to  count to 3E7 by means of three threads:   
+
+* The `unprotected` version where no measure is taken to curb the behavior of threads  
+
+* The `protected` version where measures are taken to prevent one thread from messing with the work of the others
+
+<br>
+
+## Performance comparison
+
+<br>
+
+##### To compare how each version fares performance wise let's check the results of the following experiment:
+
+<br>
+
+Factors:
+
+* `version`: where the program is 'protected' or 'unprotected'
+
+<br>
+
+Metrics:
+
+* `RSS` : Maximum resident set size of the process during its lifetime, in Kilobytes.
+* `elapsed` : Elapsed real (wall clock) time used by the process, in [hours:]minutes:seconds.
+* `cpu.sys` : Total number of CPU-seconds used by the system on behalf of the process (in kernel mode), in seconds.
+* `.user` : Total number of CPU-seconds that the process used directly (in user mode), in seconds.
+* `minor_pagefault` : Number of minor, or recoverable, page faults.  These are pages that are not valid (so they fault) but which have not yet been claimed by other virtual pages.  Thus the data in the page is still valid but the system tables must be updated.
+* `major_pagefault` : Number of major, or I/O-requiring, page faults that occurred while the process was running.  These are faults where the page has actually migrated out of primary memory. 
+* `inv_cxt_sw` : Number of times the process was context-switched involuntarily (because the time slice expired).
+* `vol_cxt_sw` : Number of times that the program was context-switched voluntarily, for instance while waiting for an I/O operation to complete
+* `execution` : Number of the execution
+
+<br>
+
+> For each combination of factor levels we had 50 repetitions, which gives us 100 executions.
+
+<br>
+
+### Load Data
+
+```{r}
+read_csv(here::here("output/perf_result.csv"),
+         progress = F,
+         col_types = cols(
+           RSS = col_integer(),
+           elapsed = col_character(),
+           cpu.sys = col_double(),
+           .user = col_double(),
+           minor_pagefault = col_integer(),
+           major_pagefault = col_integer(),
+           inv_cxt_sw = col_integer(),
+           vol_cxt_sw = col_integer(),
+           version = col_character(),
+           execution = col_integer())) %>% 
+  mutate(elapsed = lubridate::ms(elapsed),
+         version = as.factor(version)) %>% 
+  mutate(elapsed = lubridate::second(elapsed)) -> perf_data 
+
+perf_data %>%
+  glimpse()
+```
+
+<br>
+
+### Elapsed Time
+
+<br>
+
+#### Descriptive Analysis
+
+```{r}
+perf_data %>%
+  ggplot(aes(execution,elapsed,color=version)) +
+    geom_segment(aes(x = execution, y = 0,
+                     xend = execution, yend = elapsed),
+                 color = "grey50", size=0.06) +
+  geom_point(size=2) +
+  labs(x="Execution",title="(Chart 1) Elapsed time by execution")
+```
+
+* We can notice a substantially longer elapsed time in the executions of the `unprotected` version compared to the `protected` one.
+
+<br>
+
+```{r}
+perf_data %>%
+  ggplot(aes(version,elapsed)) +
+  geom_boxplot() +
+  labs(title="(Chart 2) Interquatile range by program version")
+```
+
+* Results similar to those of *Chart 1*.
+
+<br>
+
+#### Statistical Inference
+
+```{r}
+my_theta <- function(x, i) {
+    x %>% 
+        slice(i) -> d
+  
+    d %>% 
+      group_by(version) %>% 
+      summarise(med = median(elapsed, na.rm = TRUE)) -> y
+    
+    med_diff = y[y$version == "protected",]$med - y[y$version == "unprotected",]$med
+    
+    return(med_diff)
+}
+
+med_diff.boot <- boot(data = perf_data, 
+                 statistic = my_theta, 
+                 R = 2000)
+
+plot(med_diff.boot)
+```
+
+* We have a weird-tailed distributions that quite deviates from the normal, looking at the density plot it's most likely due to a lack of variance, for this reason let's use the `basic CI` (also called pivotal or empirical CI) to extract our results. 
+
+
+```{r}
+result_med_diff <- boot.ci(boot.out = med_diff.boot, 
+        conf = 0.95, 
+        type = "basic")
+
+result_med_diff
+```
+
+```{r}
+X2.5 = c(result_med_diff$basic[4])
+X97.5 = c(result_med_diff$basic[5])
+elapsed.diff = data.frame(X2.5,X97.5)
+
+elapsed.diff %>%
+  ggplot(aes(x = "( protected - unprotected )",
+             ymin = X2.5, ymax = X97.5)) +
+  geom_errorbar(width = .2) +
+  geom_hline(yintercept = 0, colour = "darkorange") +
+  labs(x="", y="elapsed (difference)") +
+    ggtitle("(Chart 3) C.I. for the difference of the median")
+```
+
+##### Regarding the difference between `protected` and `unprotected` versions in median elapsed time, we can conclude that:
+
+* As the C.I. does not intersect 0, we can say that it's statistically significant 
+    + the protected version is faster than the unprotected one.
+
+* The difference is also relevant 
+    + A difference of at least  0.6 (high end of the CI) represents both nearly half the median elapsed time of the `unprotected` version and nearly all the elapsed time of the `protected` version, *see Chart 2*.
+
+> The protected version is faster than the unprotected one.
+
+<br>
+
+### Explanation (why the difference?)
+
+```{r}
+perf_data %>%
+  ggplot(aes(execution,inv_cxt_sw,color=version)) +
+    geom_segment(aes(x = execution, y = 0,
+                     xend = execution, yend = inv_cxt_sw),
+                 color = "grey50", size=0.12) +
+  geom_point(size=2) +
+  labs(x="Execution", y="# context switches",
+       title="(Chart 4) Involutary context switches by execution")
+```
+
+* There seems to be a substantial difference in the number of involuntary context switches each version is subjected to. The `unprotected` version seems to have experienced a much larger number of **involutary context switches**, which would account for the difference in elapsed time.
+
+<br>
+
+#### Statistical Inference
+
+```{r}
+my_theta <- function(x, i) {
+    x %>% 
+        slice(i) -> d
+  
+    d %>% 
+      group_by(version) %>% 
+      summarise(med = median(inv_cxt_sw, na.rm = TRUE)) -> y
+    
+    med_diff = y[y$version == "protected",]$med - y[y$version == "unprotected",]$med
+    
+    return(med_diff)
+}
+
+med_inv_sw.boot <- boot(data = perf_data, 
+                 statistic = my_theta, 
+                 R = 2000)
+
+plot(med_inv_sw.boot)
+```
+
+* We have a somewhat weird-tailed distributions, for this reason let's use the `basic CI` (also called pivotal or empirical CI) to extract our results. 
+
+
+```{r}
+result_med_inv_sw <- boot.ci(boot.out = med_inv_sw.boot, 
+        conf = 0.95, 
+        type = "basic")
+
+result_med_inv_sw
+```
+
+```{r}
+X2.5 = c(result_med_inv_sw$basic[4])
+X97.5 = c(result_med_inv_sw$basic[5])
+inv_sw.diff = data.frame(X2.5,X97.5)
+
+inv_sw.diff %>%
+  ggplot(aes(x = "(protected - unprotected)",
+             ymin = X2.5, ymax = X97.5)) +
+  geom_errorbar(width = .2) +
+  geom_hline(yintercept = 0, colour = "darkorange") +
+  labs(x="", y="inv_cxt_sw (difference)") +
+    ggtitle("(Chart 5) C.I. for the difference of the median")
+```
+
+##### Regarding the difference between `protected` and `unprotected` versions in median number of involuntary context switches, we can conclude that:
+
+* As the C.I. does not intersect 0, we can say that it's statistically significant 
+    + The `protected` version experienced less involuntary context switches than the `unprotected` one.
+* By the scale of the C.I. we can say that it's also relevant. 
+
+> So, we can point the difference in the number of involuntary context switches as evidence for the disparity in elapsed time between program versions.    
