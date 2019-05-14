@@ -6,3 +6,4 @@ Code/Answers repository for course of Concurrent Programming (Computer Science p
 
 * José Benardi de Souza Nunes
 * Gustavo Diniz Monteiro
+* Ruan Roberto Eloy Silveira

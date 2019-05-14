@@ -2,3 +2,7 @@
 !*/
 !*.*
 .Rproj.user
+.idea
+*.iml
+*.class
+*/**/out/	
