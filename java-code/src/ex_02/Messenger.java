@@ -4,27 +4,27 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.concurrent.Semaphore;
 
-class Messager implements Channel {
+class Messenger implements Channel {
 
     private Queue<String> messages;
-    private Semaphore empty;
-    private Semaphore full;
+    private Semaphore isFull;
+    private Semaphore isEmpty;
 
-    public Messager(int capacity) {
+    public Messenger(int capacity) {
         messages = new ArrayDeque<>();
-        empty = new Semaphore(capacity);
-        full = new Semaphore(0);
+        isFull = new Semaphore(capacity);
+        isEmpty = new Semaphore(0);
     }
 
     @Override
     public void putMessage(String message) {
             try {
-                empty.acquire();
+                isFull.acquire();
                 synchronized (this) {
                     messages.add(message);
                     System.out.println("Put: " + message);
                 }
-                full.release();
+                isEmpty.release();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -34,11 +34,11 @@ class Messager implements Channel {
     public String takeMessage() {
         String message = null;
             try {
-                full.acquire();
+                isEmpty.acquire();
                 synchronized (this) {
                     message = messages.remove();
                 }
-                empty.release();
+                isFull.release();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

@@ -2,18 +2,18 @@ package ex_02;
 
 public class Receiver implements Runnable {
 
-    private Messager messager;
+    private Messenger messenger;
     private int msgQuantity;
 
-    public Receiver(Messager messager, int msgQuantity) {
-        this.messager = messager;
+    public Receiver(Messenger messenger, int msgQuantity) {
+        this.messenger = messenger;
         this.msgQuantity = msgQuantity;
     }
 
     @Override
     public void run() {
         for (int i = 0; i < msgQuantity; i++) {
-            String message = messager.takeMessage();
+            String message = messenger.takeMessage();
             System.out.println("Take: " + message);
         }
     }
