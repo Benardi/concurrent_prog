@@ -1,14 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
+#include <stdbool.h>
+
+bool one_finished = false;
+int first_time = -1; 
 
 void* request(void)
 {
-  int sleep_time;
-
-  sleep_time = 1 + rand() % 30;  
+  int sleep_time, my_id;
+  
+  sleep_time = 1 + rand() % 30; 
+  sleep (sleep_time); 
   printf("Sleep time was: %d\n",sleep_time);
-
+  one_finished = true;
+  first_time = sleep_time;
+ 
   pthread_exit(sleep_time); 
 }
 
@@ -23,12 +30,16 @@ int gateway(int num_replicas)
     pthread_create(&pthreads[i], NULL, &request, NULL); 
   
   }
+  
+  while(true) {
+  
+    if(one_finished) { 
+      return first_time;
+    }
 
-  for(i = 0; i < 5; i++) {
-    pthread_join(pthreads[i], &returnValue);
-    first_returned = (int) returnValue;
-    return first_returned;
   }
+
+
 }
 
 
