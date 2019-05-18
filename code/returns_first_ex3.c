@@ -4,6 +4,10 @@
 #include <pthread.h>
 #include <stdbool.h>
 
+void* request(void* args);
+int gateway(int num_replicas);
+int main(int argc, char *argv[]);
+
 bool one_finished = false;
 int first_time = -1; 
 
@@ -47,15 +51,22 @@ int gateway(int num_replicas)
 
 int main(int argc, char *argv[])
 {
-  void *ret;
+  int seed, result, nthreads;
+  
   /* Init random number generator*/
-  int seed, result;
   seed = time(NULL);
   srand(seed);
   
-  result = gateway(5);
+  if(argc == 2) {
+    nthreads = strtol(argv[1], NULL, 10);
+  } else {
+    nthreads = 2;
+  } 
 
+  printf("Number of threads: %d\n",nthreads);
+  result = gateway(nthreads);
   printf("Result: %ds\n",result);
+
   return 0;
 }
 

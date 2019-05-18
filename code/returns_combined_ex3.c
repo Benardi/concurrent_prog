@@ -3,6 +3,11 @@
 #include <stdint.h>
 #include <pthread.h>
 
+
+void* request(void* args);
+int gateway(int num_replicas);
+int main(int argc, char *argv[]);
+
 void* request(void* args)
 {
   int sleep_time;
@@ -28,7 +33,7 @@ int gateway(int num_replicas)
   
   }
 
-  for(i = 0; i < 5; i++) {
+  for(i = 0; i < num_replicas; i++) {
     pthread_join(pthreads[i], &returnValue);
     sleep = (int) (intptr_t) returnValue;
     total_sleep += sleep;
@@ -39,15 +44,22 @@ int gateway(int num_replicas)
 
 int main(int argc, char *argv[])
 {
-  void *ret;
+  int seed, result, nthreads;
+  
   /* Init random number generator*/
-  int seed, result;
   seed = time(NULL);
   srand(seed);
   
-  result = gateway(5);
+  if(argc == 2) {
+    nthreads = strtol(argv[1], NULL, 10);
+  } else {
+    nthreads = 2;
+  }
 
-  printf("Result: %ds\n",result);
+  printf("Number of Threads: %d\n", nthreads); 
+  result = gateway(nthreads);
+  printf("Result: %ds\n", result);
+
   return 0;
 }
 
