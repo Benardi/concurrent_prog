@@ -1,9 +1,10 @@
+#include <time.h>
 #include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include <stdint.h>
 #include <pthread.h>
 #include <stdbool.h>
-#include <time.h>
 
 void* request(void* args);
 int gateway(int num_replicas);
@@ -18,8 +19,8 @@ void* request(void* args)
   int my_id = (intptr_t) args;  
 
   sleep_time = 1 + rand() % 30; 
-  sleep (sleep_time); 
   printf("Sleep time of thread %d: %ds\n", my_id, sleep_time);
+  sleep (sleep_time); 
   one_finished = true;
   first_time = sleep_time;
  
