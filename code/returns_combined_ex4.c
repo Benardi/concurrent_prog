@@ -2,11 +2,14 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <pthread.h>
-#include <time.h>
+#include <unistd.h>
+#include <signal.h>
 
 void* request(void* args);
 int gateway(int num_replicas);
 int main(int argc, char *argv[]);
+void sigalrm_handler(int sig);
+
 
 void* request(void* args)
 {
@@ -14,16 +17,16 @@ void* request(void* args)
   int my_id = (intptr_t) args;
 
   sleep_time = 1 + rand() % 30; 
-  sleep (sleep_time); 
   printf("Sleep time of thread %d: %ds\n", my_id, sleep_time);
+  sleep (sleep_time); 
 
   pthread_exit((void*) (intptr_t) sleep_time); 
 }
 
+
 int gateway(int num_replicas)
 {
   int i, sleep;
-  clock_t start;
   void *returnValue;
   int total_sleep = 0;
   
@@ -35,10 +38,6 @@ int gateway(int num_replicas)
   }
 
   for(i = 0; i < num_replicas; i++) {
-    if (total_sleep > 16) {
-      total_sleep = -1;
-      break;
-    }
     pthread_join(pthreads[i], &returnValue);
     sleep = (int) (intptr_t) returnValue;
     total_sleep += sleep;
@@ -49,10 +48,20 @@ int gateway(int num_replicas)
 }
 
 
+void signalrm_handler(int sig)
+{
+  printf("Result: %d\n", -1);
+  exit(0);
+}
+
+
 int main(int argc, char *argv[])
 {
   int seed, result, nthreads;
   
+  /* Map alarm to its handler */
+  signal(SIGALRM, signalrm_handler);
+
   /* Init random number generator*/
   seed = time(NULL);
   srand(seed);
@@ -64,6 +73,9 @@ int main(int argc, char *argv[])
   }
 
   printf("Number of Threads: %d\n", nthreads); 
+
+  alarm(16);
+
   result = gateway(nthreads);
   printf("Result: %ds\n", result);
 
