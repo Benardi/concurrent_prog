@@ -2,7 +2,7 @@ package ex_03.first_return;
 
 public class Main {
 
-    private static int gateway() {
+    public static int gateway() {
         int num_replicas = 5;
 
         System.out.println(String.format("Number of threads: %d", num_replicas));

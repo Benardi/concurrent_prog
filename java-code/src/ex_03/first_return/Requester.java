@@ -5,7 +5,7 @@ import java.util.Random;
 public class Requester implements Runnable {
 
     private int id;
-    private static volatile int time = -1;
+    private static volatile int time = 0;
 
     public  Requester(int id) {
         this.id = id;
@@ -19,13 +19,17 @@ public class Requester implements Runnable {
         try {
             System.out.printf("Sleep time of thread %d: %ds\n", id, sleepTime);
             Thread.sleep(sleepTime * 1000);
-            time = sleepTime;
+            this.updateTime(sleepTime);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-     public static int getTime() {
+    public void updateTime(int time) {
+        Requester.time = time;
+    }
+
+    public static int getTime() {
         return time;
     }
 }
