@@ -3,13 +3,15 @@
 #include <stdint.h>
 #include <pthread.h>
 #include <stdbool.h>
+#include <unistd.h>
+
+bool one_finished = false;
+int first_time = -1; 
 
 void* request(void* args);
 int gateway(int num_replicas);
 int main(int argc, char *argv[]);
 
-bool one_finished = false;
-int first_time = -1; 
 
 void* request(void* args)
 {
@@ -17,13 +19,14 @@ void* request(void* args)
   int my_id = (intptr_t) args;  
 
   sleep_time = 1 + rand() % 30; 
-  sleep (sleep_time); 
   printf("Sleep time of thread %d: %ds\n", my_id, sleep_time);
+  sleep (sleep_time); 
   one_finished = true;
   first_time = sleep_time;
  
   pthread_exit((void*) (intptr_t) sleep_time); 
 }
+
 
 int gateway(int num_replicas)
 {
@@ -44,8 +47,6 @@ int gateway(int num_replicas)
     }
 
   }
-
-
 }
 
 
