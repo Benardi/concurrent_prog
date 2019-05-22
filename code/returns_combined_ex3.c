@@ -1,14 +1,12 @@
 #include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include <stdint.h>
 #include <pthread.h>
-#include <unistd.h>
-
 
 void* request(void* args);
 int gateway(int num_replicas);
 int main(int argc, char *argv[]);
-
 
 void* request(void* args)
 {
@@ -52,7 +50,9 @@ int main(int argc, char *argv[])
   /* Init random number generator*/
   seed = time(NULL);
   srand(seed);
-  
+
+  /* If receives one cmd line argument the argument is used as
+   * number of threads, Else number of threads is 2 */ 
   if(argc == 2) {
     nthreads = strtol(argv[1], NULL, 10);
   } else {
