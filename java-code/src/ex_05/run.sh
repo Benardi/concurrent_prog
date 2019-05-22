@@ -1,3 +1,3 @@
-echo "class,elements,total_time,threads" > report.csv
+echo "class,elements,total_time,threads,write_level" > report.csv
 javac Main.java
 java Main >> report.csv

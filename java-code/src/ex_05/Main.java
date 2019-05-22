@@ -15,108 +15,153 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
- * Main
- */
+* Main
+*/
 public class Main {
-    public final static int MAX_THREAD_POOL_SIZE = 10;
+	public final static int MAX_THREAD_POOL_SIZE = 10;
 	public final static int ENTRIES_SIZE = 1000;
-
-
-    public static Map<String, Integer> concurrentHashMapObject = null;
+	
+	
+	public static Map<String, Integer> concurrentHashMapObject = null;
 	public static Map<String, Integer> synchronizedMapObject = null;
 	public static List<Integer> copyOnWriteListObject = null;
-    public static List<Integer> synchronizedListObject = null;
-    
-    public static void main(String[] args) throws InterruptedException {
-		List<Integer> range = IntStream.rangeClosed(1,10)
-    		.boxed().collect(Collectors.toList());
+	public static List<Integer> synchronizedListObject = null;
+	
+	public static void main(String[] args) throws InterruptedException {
+		List<Integer> multiplierRange = IntStream.rangeClosed(1,10)
+		.boxed().collect(Collectors.toList());
+		List<Integer> writeLevels = IntStream.rangeClosed(1,4)
+		.boxed().collect(Collectors.toList());
 		copyOnWriteListObject = new CopyOnWriteArrayList<>();
 		synchronizedListObject = Collections.synchronizedList(new ArrayList<Integer>());
-        concurrentHashMapObject = new ConcurrentHashMap<String, Integer>();
-        synchronizedMapObject = Collections.synchronizedMap(new HashMap<String, Integer>());
-
-		range.forEach(multiplier -> {
-			try {
-				testList(copyOnWriteListObject, multiplier);
-				testList(synchronizedListObject, multiplier);
-				testMap(concurrentHashMapObject, multiplier);
-				testMap(synchronizedMapObject, multiplier);
-			} catch (Exception e) {
-				System.out.println(e.getMessage());
-			}
+		concurrentHashMapObject = new ConcurrentHashMap<String, Integer>();
+		synchronizedMapObject = Collections.synchronizedMap(new HashMap<String, Integer>());
+		
+		writeLevels.forEach(wl -> {			
+			multiplierRange.forEach(multiplier -> {
+				try {
+					testMap(concurrentHashMapObject, multiplier, wl);
+					testMap(synchronizedMapObject, multiplier, wl);
+					testList(synchronizedListObject, multiplier, wl);
+					testList(copyOnWriteListObject, multiplier, wl);
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
+				}
+			});
 		});
-    }
-    
-    public static void testList(final List<Integer> testCollection, int entriesMultiplier) throws InterruptedException {
+	}
+	
+	public static void testList(final List<Integer> testCollection, int entriesMultiplier, int writeLevel) throws InterruptedException {
 		for (int poolSize = 1; poolSize <= MAX_THREAD_POOL_SIZE; poolSize++) {
-
+			
 			ExecutorService executorServer = Executors.newFixedThreadPool(poolSize);
 			int size = ENTRIES_SIZE * entriesMultiplier;
 			long initialTime = System.nanoTime();
-
-			for (int j = 0; j < poolSize; j++) {
-				executorServer.execute(() -> {
-						for (int i = 0; i < size; i++) {
-							Integer random = (int) Math.ceil(Math.random() * 550000);
-
-							testCollection.add(i, random);
-							testCollection.get(i);
-						}
-					}
-				);
-			}
-
-			executorServer.shutdown();
-			executorServer.awaitTermination(Long.MAX_VALUE, TimeUnit.MINUTES);
-
-			long finalTime = System.nanoTime();
-			long totalTime = TimeUnit.NANOSECONDS.toMillis(finalTime - initialTime);
-			// System.out.println(
-			// 	"Total time to insert and get " + ENTRIES_SIZE +
-			// 	" elements in " + testCollection.getClass().getName() + " collection " +
-			// 	"with total time: " + totalTime + " with " + poolSize + " threads."
-			// );
-			System.out.printf("%s,%d,%d,%d" + System.lineSeparator(),
-				testCollection.getClass().getSimpleName(),
-				size, totalTime, poolSize
-			);
-		}
-    }
-    
-    public static void testMap(final Map<String, Integer> testCollection, int entriesMultiplier) throws InterruptedException {
-		for (int poolSize = 1; poolSize <= MAX_THREAD_POOL_SIZE; poolSize++) {
-
-			ExecutorService executorServer = Executors.newFixedThreadPool(poolSize);
-
-			int size = ENTRIES_SIZE * entriesMultiplier;
-			long initialTime = System.nanoTime();
-
+			
 			for (int j = 0; j < poolSize; j++) {
 				executorServer.execute(() -> {
 					for (int i = 0; i < size; i++) {
-                            Integer random = (int) Math.ceil(Math.random() * 550000);
-                            
+						
+						Integer random = (int) Math.ceil(Math.random() * 550000);
+						if (writeLevel == 4) {
+							testCollection.add(i, random);
+							testCollection.add(i, random);
+							testCollection.add(i, random);
+							testCollection.add(i, random);
+						}
+
+						if (writeLevel == 3) {
+							testCollection.add(i, random);
+							testCollection.add(i, random);
+							testCollection.add(i, random);
+							testCollection.get(i);
+						}
+
+						if (writeLevel == 2) {
+							testCollection.add(i, random);
+							testCollection.add(i, random);
+							testCollection.get(i);
+							testCollection.get(i);
+						}
+
+						if (writeLevel == 1) {
+							testCollection.add(i, random);
+							testCollection.get(i);
+							testCollection.get(i);
+							testCollection.get(i);
+						}
+					}
+				});
+			}
+			
+			executorServer.shutdown();
+			executorServer.awaitTermination(Long.MAX_VALUE, TimeUnit.MINUTES);
+			
+			long finalTime = System.nanoTime();
+			long totalTime = TimeUnit.NANOSECONDS.toMillis(finalTime - initialTime);
+			System.out.printf("%s,%d,%d,%d,%d" + System.lineSeparator(),
+				testCollection.getClass().getSimpleName(),
+				size, totalTime, poolSize, writeLevel
+			);
+		}
+	}
+	
+	public static void testMap(final Map<String, Integer> testCollection, int entriesMultiplier, int writeLevel) throws InterruptedException {
+		for (int poolSize = 1; poolSize <= MAX_THREAD_POOL_SIZE; poolSize++) {
+			
+			ExecutorService executorServer = Executors.newFixedThreadPool(poolSize);
+			
+			int size = ENTRIES_SIZE * entriesMultiplier;
+			long initialTime = System.nanoTime();
+			
+			for (int j = 0; j < poolSize; j++) {
+				executorServer.execute(() -> {
+					for (int i = 0; i < size; i++) {
+						Integer random = (int) Math.ceil(Math.random() * 550000);
+						if (writeLevel == 4) {
+							testCollection.put(String.valueOf(random), random);
+							testCollection.put(String.valueOf(random), random);
+							testCollection.put(String.valueOf(random), random);
+							testCollection.put(String.valueOf(random), random);
+						}
+
+						if (writeLevel == 3) {
+							testCollection.put(String.valueOf(random), random);
+							testCollection.put(String.valueOf(random), random);
 							testCollection.put(String.valueOf(random), random);
 							testCollection.get(String.valueOf(random));
 						}
+
+						if (writeLevel == 2) {
+							testCollection.put(String.valueOf(random), random);
+							testCollection.put(String.valueOf(random), random);
+							testCollection.get(String.valueOf(random));
+							testCollection.get(String.valueOf(random));
+						}
+
+						if (writeLevel == 1) {
+							testCollection.put(String.valueOf(random), random);
+							testCollection.get(String.valueOf(random));
+							testCollection.get(String.valueOf(random));
+							testCollection.get(String.valueOf(random));
+						}
+						
+
+						testCollection.put(String.valueOf(random), random);
+						testCollection.get(String.valueOf(random));
 					}
+				}
 				);
 			}
-
+			
 			executorServer.shutdown();
 			executorServer.awaitTermination(Long.MAX_VALUE, TimeUnit.MINUTES);
-
+			
 			long finalTime = System.nanoTime();
 			long totalTime = TimeUnit.NANOSECONDS.toMillis(finalTime - initialTime);
-
-			// System.out.println(
-			// 	"Total time to insert and get " + ENTRIES_SIZE +
-			// 	" elements in " + testCollection.getClass().getName() + " collection " +
-			// 	"with total time: " + totalTime + " with " + poolSize + " threads."
-			// );
-			System.out.printf("%s,%d,%d,%d" + System.lineSeparator(), 
+			System.out.printf("%s,%d,%d,%d,%d" + System.lineSeparator(), 
 				testCollection.getClass().getSimpleName(),
-				size, totalTime, poolSize
+				size, totalTime, poolSize, writeLevel
 			);
 		}
 	}
