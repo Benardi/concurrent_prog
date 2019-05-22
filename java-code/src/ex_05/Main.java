@@ -29,24 +29,28 @@ public class Main {
 	
 	public static void main(String[] args) throws InterruptedException {
 		List<Integer> multiplierRange = IntStream.rangeClosed(1,10)
-		.boxed().collect(Collectors.toList());
+			.boxed().collect(Collectors.toList());
 		List<Integer> writeLevels = IntStream.rangeClosed(1,4)
-		.boxed().collect(Collectors.toList());
+			.boxed().collect(Collectors.toList());
+		List<Integer> rounds = IntStream.rangeClosed(1,15)
+			.boxed().collect(Collectors.toList());
 		copyOnWriteListObject = new CopyOnWriteArrayList<>();
 		synchronizedListObject = Collections.synchronizedList(new ArrayList<Integer>());
 		concurrentHashMapObject = new ConcurrentHashMap<String, Integer>();
 		synchronizedMapObject = Collections.synchronizedMap(new HashMap<String, Integer>());
 		
-		writeLevels.forEach(wl -> {			
-			multiplierRange.forEach(multiplier -> {
-				try {
-					testMap(concurrentHashMapObject, multiplier, wl);
-					testMap(synchronizedMapObject, multiplier, wl);
-					testList(synchronizedListObject, multiplier, wl);
-					testList(copyOnWriteListObject, multiplier, wl);
-				} catch (Exception e) {
-					System.out.println(e.getMessage());
-				}
+		rounds.forEach(r -> {			
+			writeLevels.forEach(wl -> {			
+				multiplierRange.forEach(multiplier -> {
+					try {
+						testMap(concurrentHashMapObject, multiplier, wl);
+						testMap(synchronizedMapObject, multiplier, wl);
+						testList(synchronizedListObject, multiplier, wl);
+						testList(copyOnWriteListObject, multiplier, wl);
+					} catch (Exception e) {
+						System.out.println(e.getMessage());
+					}
+				});
 			});
 		});
 	}
