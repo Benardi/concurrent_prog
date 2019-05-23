@@ -19,8 +19,7 @@ import java.util.stream.IntStream;
 */
 public class Main {
 	public final static int MAX_THREAD_POOL_SIZE = 10;
-	public final static int ENTRIES_SIZE = 1000;
-	
+	public final static int ENTRIES_SIZE = 50;
 	
 	public static Map<String, Integer> concurrentHashMapObject = null;
 	public static Map<String, Integer> synchronizedMapObject = null;
@@ -56,7 +55,7 @@ public class Main {
 	}
 	
 	public static void testList(final List<Integer> testCollection, int entriesMultiplier, int writeLevel) throws InterruptedException {
-		for (int poolSize = 1; poolSize <= MAX_THREAD_POOL_SIZE; poolSize++) {
+		for (int poolSize = 1; poolSize <= MAX_THREAD_POOL_SIZE; poolSize+=3) {
 			
 			ExecutorService executorServer = Executors.newFixedThreadPool(poolSize);
 			int size = ENTRIES_SIZE * entriesMultiplier;
@@ -102,7 +101,7 @@ public class Main {
 			executorServer.awaitTermination(Long.MAX_VALUE, TimeUnit.MINUTES);
 			
 			long finalTime = System.nanoTime();
-			long totalTime = TimeUnit.NANOSECONDS.toMillis(finalTime - initialTime);
+			long totalTime = finalTime - initialTime;
 			System.out.printf("%s,%d,%d,%d,%d" + System.lineSeparator(),
 				testCollection.getClass().getSimpleName(),
 				size, totalTime, poolSize, writeLevel
@@ -111,7 +110,7 @@ public class Main {
 	}
 	
 	public static void testMap(final Map<String, Integer> testCollection, int entriesMultiplier, int writeLevel) throws InterruptedException {
-		for (int poolSize = 1; poolSize <= MAX_THREAD_POOL_SIZE; poolSize++) {
+		for (int poolSize = 1; poolSize <= MAX_THREAD_POOL_SIZE; poolSize+=3) {
 			
 			ExecutorService executorServer = Executors.newFixedThreadPool(poolSize);
 			
@@ -162,7 +161,7 @@ public class Main {
 			executorServer.awaitTermination(Long.MAX_VALUE, TimeUnit.MINUTES);
 			
 			long finalTime = System.nanoTime();
-			long totalTime = TimeUnit.NANOSECONDS.toMillis(finalTime - initialTime);
+			long totalTime = finalTime - initialTime;
 			System.out.printf("%s,%d,%d,%d,%d" + System.lineSeparator(), 
 				testCollection.getClass().getSimpleName(),
 				size, totalTime, poolSize, writeLevel
