@@ -284,6 +284,7 @@ inv_sw.diff %>%
     + The `protected` version experienced less involuntary context switches than the `unprotected` one.
 * By the scale of the C.I. we can say that it's also relevant. 
 
+<<<<<<< HEAD
 > So, we can point the difference in the number of involuntary context switches as evidence for the disparity in elapsed time between program versions.   
 
 <br>
@@ -417,4 +418,87 @@ inv_sw.diff %>%
 
 
 
+=======
+> So, we can point the difference in the number of involuntary context switches as evidence for the disparity in elapsed time between program versions.
 
+# Question 5
+
+
+* Code to generate dataset can be found at `java-code/src/ex_05/Main.java`
+
+```{c, eval=FALSE, code = readLines(here::here("java-code/src/ex_05/Main.java"))}
+
+```
+
+##### The data set shows the results of an experiment in which the performances of 4 collections were measured, the experiment consisted of the insertion of competing reading / writing of elements (between 200-2000) in the collection with different numbers of threads (1, 4, 7 or 10) and with different writing / reading ratios (100/0 - 75/25 - 50/50 - 25/75 respectively) of different amounts of elements.
+
+```{r}
+read_csv(here::here("output/report.csv")) %>%
+  mutate(total_time= total_time / 1000000) -> data
+
+glimpse(data)
+```
+```{r}
+data %>%
+  ggplot(aes(y = class, x = total_time)) +
+  geom_point() +
+  facet_wrap(~threads)
+```
+##### By exploring the data more generally, we can easily see the impact that the use of more threads at the same time causes on the performance of certain collections, such as the `CopyOnWriteArrayList` case.
+##### The `SynchronizedRandomAccessList` case, however, seems to have an overall improvement when used with more than one thread, but when this number of theads increases too much, it tends to suffer from the overhead caused by the synchronization work.
+##### Also noteworthy is how map-based collections perform better than list-based collections in all cases.
+
+```{r}
+data %>%
+  ggplot(aes(y = total_time, x = elements, group=elements)) +
+  geom_boxplot() +
+  facet_wrap(~class, scales = "free")
+```
+##### We also see that the growth in the total execution time for the list-based collections grows linearly as the number of elements entered increases as long as the map-based collections appear to be random.
+
+##### Because lists and maps have very different performance, we will keep them in different separate charts from now on.
+
+```{r}
+data %>%
+  filter(class != 'CopyOnWriteArrayList') %>% 
+  filter(class != 'SynchronizedRandomAccessList') %>% 
+  ggplot(aes(y = class, x = total_time)) +
+  geom_point() + facet_wrap(~write_level)
+```
+
+#### The proportion of writing and reading does not appear to consistently impact the performance of map-based collections as shown below with list-based collections
+
+```{r}
+data %>%
+  filter(class != 'ConcurrentHashMap') %>% 
+  filter(class != 'SynchronizedMap') %>% 
+  ggplot(aes(y = class, x = total_time)) +
+  geom_point() + facet_wrap(~write_level)
+```
+#### In the lists the proportion of writing impacts greatly by the increase of elements themselves.
+
+```{r}
+data %>%
+  filter(class != 'ConcurrentHashMap') %>% 
+  filter(class != 'SynchronizedMap') %>% 
+  ggplot(aes(x =threads, y = total_time)) +
+  scale_x_continuous(breaks=seq(1, 10, 3)) +
+  geom_point() +
+  facet_wrap(~class)
+```
+##### In list-based collections, this impact caused by the increase in threads seems much more explicit and following near-linear growth.
+
+
+```{r}
+data %>%
+  filter(class != 'CopyOnWriteArrayList') %>% 
+  filter(class != 'SynchronizedRandomAccessList') %>% 
+  ggplot(aes(x =threads, y = total_time)) +
+    scale_x_continuous(breaks=seq(1, 10, 3)) +
+  geom_point() +
+  facet_wrap(~class)
+```
+
+##### In map-based collections the number of threads seems to have some impact but it does not follow a pattern, probably caused by the thread synchronization impact.
+
+#### In general we can conclude that the number of threads impact the performance of the collections, such as CopyOnWriteArrayList that worsens as the number of threads increases and the SynchronizedRandomAccessList that seems to have an improvement when it leaves a unique one for more threads than as the number of threads increases greatly will have their performance degraded as well. Already in map-based collections the impact of the number of theads seems to be smaller and more random, probably caused by moments of locking multiple threads at the same time and synchronization.
