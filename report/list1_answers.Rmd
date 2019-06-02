@@ -284,6 +284,7 @@ inv_sw.diff %>%
     + The `protected` version experienced less involuntary context switches than the `unprotected` one.
 * By the scale of the C.I. we can say that it's also relevant. 
 
+<<<<<<< HEAD
 > So, we can point the difference in the number of involuntary context switches as evidence for the disparity in elapsed time between program versions.   
 
 <br>
@@ -417,4 +418,84 @@ inv_sw.diff %>%
 
 
 
+=======
+> So, we can point the difference in the number of involuntary context switches as evidence for the disparity in elapsed time between program versions.
+
+# Question 5
+
+##### The data set shows the results of an experiment in which the performances of 4 collections were measured, the experiment consisted of the insertion of competing reading / writing of elements (between 200-2000) in the collection with different numbers of threads (1, 4, 7 or 10) and with different writing / reading ratios (100/0 - 75/25 - 50/50 - 25/75 respectively) of different amounts of elements.
+
+```{r}
+read_csv(here::here("output/report.csv")) %>%
+  mutate(total_time= total_time / 1000000) -> data
+
+glimpse(data)
+```
+```{r}
+data %>%
+  ggplot(aes(y = class, x = total_time)) +
+  geom_point() +
+  facet_wrap(~threads)
+```
+##### By exploring the data more generally, we can easily see the impact that the use of more threads at the same time causes on the performance of certain collections, such as the `CopyOnWriteArrayList` case.
+##### The `SynchronizedRandomAccessList` case, however, seems to have an overall improvement when used with more than one thread, but when this number of theads increases too much, it tends to suffer from the overhead caused by the synchronization work.
+##### Also noteworthy is how map-based collections perform better than list-based collections in all cases.
+
+```{r}
+data %>%
+  ggplot(aes(y = total_time, x = elements, group=elements)) +
+  geom_boxplot() +
+  facet_wrap(~class,scales = "free")
+```
+
+
+```{r}
+data %>% 
+  ggplot(aes(y = class, x = total_time)) + 
+  geom_point() + facet_wrap(~write_level)
+```
+
+```{r}
+data %>% 
+  filter(class != 'CopyOnWriteArrayList') %>% 
+  filter(class != 'SynchronizedRandomAccessList') %>% 
+  ggplot(aes(y = class, x = total_time)) + 
+  geom_point() + facet_wrap(~write_level) +
+  geom_jitter()
+```
+
+```{r}
+data %>% 
+  filter(class != 'ConcurrentHashMap') %>% 
+  filter(class != 'SynchronizedMap') %>% 
+  ggplot(aes(y = class, x = total_time)) + 
+  geom_point() + facet_wrap(~write_level) +
+  geom_jitter()
+```
+
+```{r}
+data %>% 
+  ggplot(aes(x =threads, y = total_time)) +
+  geom_point() +
+  facet_wrap(~class)
+```
+
+```{r}
+data %>%
+  filter(class != 'ConcurrentHashMap') %>% 
+  filter(class != 'SynchronizedMap') %>% 
+  ggplot(aes(x =threads, y = total_time)) +
+  geom_point() +
+  facet_wrap(~class)
+```
+
+```{r}
+data %>%
+  filter(class != 'CopyOnWriteArrayList') %>% 
+  filter(class != 'SynchronizedRandomAccessList') %>% 
+  ggplot(aes(x =threads, y = total_time)) +
+  geom_point() +
+  facet_wrap(~class)
+```
+>>>>>>> a84a961... Add new plots for question 5 and some explanations.
 
