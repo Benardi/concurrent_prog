@@ -30,11 +30,37 @@ theme_set(theme_bw())
 
 # Question 1
 
+<br>
+
+## Implementation
+
 In this problem let us compare two versions of a program that's supposed to  count to 3E7 by means of three threads:   
 
 * The `unprotected` version where no measure is taken to curb the behavior of threads  
 
 * The `protected` version where measures are taken to prevent one thread from messing with the work of the others
+
+<br>
+
+### Unprotected version
+
+* Code can be found at `code/unprotected_ex1.c`
+
+
+```{c, eval=FALSE, code = readLines(here::here("code/unprotected_ex1.c"))}
+
+```
+
+<br>
+
+### Protected version
+
+* Code can be found at `code/protected_ex1.c`
+
+
+```{c, eval=FALSE, code = readLines(here::here("code/protected_ex1.c"))}
+
+```
 
 <br>
 
@@ -258,4 +284,137 @@ inv_sw.diff %>%
     + The `protected` version experienced less involuntary context switches than the `unprotected` one.
 * By the scale of the C.I. we can say that it's also relevant. 
 
-> So, we can point the difference in the number of involuntary context switches as evidence for the disparity in elapsed time between program versions.    
+> So, we can point the difference in the number of involuntary context switches as evidence for the disparity in elapsed time between program versions.   
+
+<br>
+
+***
+
+<br>
+
+# Question 3
+
+<br>
+
+## C version
+
+<br>
+
+
+### Returns first result
+
+<br>
+
+* Code can be found at `code/returns_first_ex3.c`
+
+```{c, eval=FALSE, code = readLines(here::here("code/returns_first_ex3.c"))}
+
+```
+
+<br>
+
+### Returns combined result
+
+<br>
+
+* Code can be found at `code/returns_combined_ex3.c`
+
+```{c, eval=FALSE, code = readLines(here::here("code/returns_combined_ex3.c"))}
+
+```
+
+<br>
+
+## Java version
+
+<br>
+
+### Returns first result
+
+<br>
+
+* Code can be found at :
+  + `java-code/src/ex_03/first_return/Main.java`
+  + `java-code/src/ex_03/first_return/Requester.java`
+
+<br>
+
+#### Requester
+
+```{r, eval=FALSE, code = readLines(here::here("java-code/src/ex_03/first_return/Requester.java"))}
+
+```
+
+<br>
+
+#### Main
+
+```{r, eval=FALSE, code = readLines(here::here("java-code/src/ex_03/first_return/Main.java"))}
+
+```
+
+### Returns combined result
+
+<br>
+
+* Code can be found at :
+  + `java-code/src/ex_03/combined_return/CombinedRequester.java`
+  + `java-code/src/ex_03/combined_return/CombinedMain.java`
+
+
+<br>
+
+#### Requester
+
+```{r, eval=FALSE, code = readLines(here::here("java-code/src/ex_03/combined_return/CombinedRequester.java"))}
+
+```
+
+<br>
+
+#### Main
+
+```{r, eval=FALSE, code = readLines(here::here("java-code/src/ex_03/combined_return/CombinedMain.java"))}
+
+```
+
+<br>
+
+***
+
+<br>
+
+# Question 4
+
+<br>
+
+## C version
+
+<br>
+
+
+### Returns first result
+
+<br>
+
+* Code can be found at `code/returns_first_ex4.c`
+
+```{c, eval=FALSE, code = readLines(here::here("code/returns_first_ex4.c"))}
+
+```
+
+<br>
+
+### Returns combined result
+
+<br>
+
+* Code can be found at `code/returns_combined_ex4.c`
+
+```{c, eval=FALSE, code = readLines(here::here("code/returns_combined_ex4.c"))}
+
+```
+
+
+
+
