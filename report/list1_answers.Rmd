@@ -30,11 +30,37 @@ theme_set(theme_bw())
 
 # Question 1
 
+<br>
+
+## Implementation
+
 In this problem let us compare two versions of a program that's supposed to  count to 3E7 by means of three threads:   
 
 * The `unprotected` version where no measure is taken to curb the behavior of threads  
 
 * The `protected` version where measures are taken to prevent one thread from messing with the work of the others
+
+<br>
+
+### Unprotected version
+
+* Code can be found at `code/unprotected_ex1.c`
+
+
+```{c, eval=FALSE, code = readLines(here::here("code/unprotected_ex1.c"))}
+
+```
+
+<br>
+
+### Protected version
+
+* Code can be found at `code/protected_ex1.c`
+
+
+```{c, eval=FALSE, code = readLines(here::here("code/protected_ex1.c"))}
+
+```
 
 <br>
 

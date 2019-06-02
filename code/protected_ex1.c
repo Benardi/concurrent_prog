@@ -26,10 +26,6 @@ int main(int argc, char *argv[]) {
     pthread_create(&pthreads[i], NULL, &run, (void*) i);
     pthread_join(pthreads[i], NULL);
   }
-/*
-  for(i = 0; i < 3; i++) {
-  }
-*/
   printf("counter=%ld\n", counter);
   
   return(0);
