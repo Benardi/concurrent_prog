@@ -420,6 +420,39 @@ inv_sw.diff %>%
 
 <br>
 
+## Java version
+
+<br>
+
+### Returns first result
+
+<br>
+
+* Code can be found at `java-code/src/ex_04/ReturnFirst.java`
+
+<br>
+
+```{r, eval=FALSE, code = readLines(here::here("java-code/src/ex_04/ReturnFirst.java"))}
+
+```
+
+
+### Returns combined result
+
+<br>
+
+* Code can be found at `java-code/src/ex_04/ReturnFirstCombined.java`
+
+<br>
+
+
+```{r, eval=FALSE, code = readLines(here::here("java-code/src/ex_04/ReturnFirstCombined.java"))}
+
+```
+
+
+<br>
+
 ***
 
 <br>

@@ -58,3 +58,4 @@ public class ReturnFirstCombined extends Thread {
 		System.out.println("Result: " + id);
 	}
 }
+
