@@ -1,10 +1,10 @@
-#include <sys/time.h>
 #include <errno.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdint.h>
 #include <pthread.h>
+#include <sys/time.h>
 
 int f_sleep_time = 0;
 int n_released = 0;
@@ -51,7 +51,6 @@ int gateway(int num_replicas)
   int total_sleep = 0;
   int timeInMs = 16000;
 
-  /*pthread_t timeout;*/
   pthread_t pthreads[num_replicas];
 
   /* Start time struct */ 
