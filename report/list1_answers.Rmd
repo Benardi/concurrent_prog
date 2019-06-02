@@ -423,6 +423,13 @@ inv_sw.diff %>%
 
 # Question 5
 
+
+* Code to generate dataset can be found at `java-code/src/ex_05/Main.java`
+
+```{c, eval=FALSE, code = readLines(here::here("java-code/src/ex_05/Main.java"))}
+
+```
+
 ##### The data set shows the results of an experiment in which the performances of 4 collections were measured, the experiment consisted of the insertion of competing reading / writing of elements (between 200-2000) in the collection with different numbers of threads (1, 4, 7 or 10) and with different writing / reading ratios (100/0 - 75/25 - 50/50 - 25/75 respectively) of different amounts of elements.
 
 ```{r}
@@ -491,10 +498,7 @@ data %>%
   geom_point() +
   facet_wrap(~class)
 ```
-<<<<<<< HEAD
->>>>>>> a84a961... Add new plots for question 5 and some explanations.
-=======
+
 ##### In map-based collections the number of threads seems to have some impact but it does not follow a pattern, probably caused by the thread synchronization impact.
->>>>>>> 4b149d9... Add remaining explanations and changes in graphics related to question 5.
 
 #### In general we can conclude that the number of threads impact the performance of the collections, such as CopyOnWriteArrayList that worsens as the number of threads increases and the SynchronizedRandomAccessList that seems to have an improvement when it leaves a unique one for more threads than as the number of threads increases greatly will have their performance degraded as well. Already in map-based collections the impact of the number of theads seems to be smaller and more random, probably caused by moments of locking multiple threads at the same time and synchronization.
