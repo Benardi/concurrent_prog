@@ -1,11 +1,12 @@
 ---
 title: "Concurrent Programming - List 1"
 author: José Benardi de Souza Nunes, Gustavo Diniz Monteiro, Ruan Roberto Eloy Silveira
-output:   
+output:
   html_document:
     df_print: paged
     toc: yes
     toc_float: yes
+
 ---
 
 <br>
@@ -135,7 +136,8 @@ perf_data %>%
                      xend = execution, yend = elapsed),
                  color = "grey50", size=0.06) +
   geom_point(size=2) +
-  labs(x="Execution",title="(Chart 1) Elapsed time by execution")
+  labs(x="Execution", y= "Elapsed time (s)",
+       title="(Chart 1) Elapsed time by execution")
 ```
 
 * We can notice a substantially longer elapsed time in the executions of the `unprotected` version compared to the `protected` one.
@@ -146,7 +148,8 @@ perf_data %>%
 perf_data %>%
   ggplot(aes(version,elapsed)) +
   geom_boxplot() +
-  labs(title="(Chart 2) Interquatile range by program version")
+  labs(y="Elapsed time (s)",x="program version",
+       title="(Chart 2) Interquatile range by program version")
 ```
 
 * Results similar to those of *Chart 1*.
@@ -197,7 +200,7 @@ elapsed.diff %>%
              ymin = X2.5, ymax = X97.5)) +
   geom_errorbar(width = .2) +
   geom_hline(yintercept = 0, colour = "darkorange") +
-  labs(x="", y="elapsed (difference)") +
+  labs(x="", y="elapsed time (difference)") +
     ggtitle("(Chart 3) C.I. for the difference of the median")
 ```
 
@@ -284,7 +287,6 @@ inv_sw.diff %>%
     + The `protected` version experienced less involuntary context switches than the `unprotected` one.
 * By the scale of the C.I. we can say that it's also relevant. 
 
-<<<<<<< HEAD
 > So, we can point the difference in the number of involuntary context switches as evidence for the disparity in elapsed time between program versions.   
 
 <br>
@@ -416,66 +418,146 @@ inv_sw.diff %>%
 
 ```
 
+<br>
 
+***
 
-=======
-> So, we can point the difference in the number of involuntary context switches as evidence for the disparity in elapsed time between program versions.
+<br>
 
 # Question 5
 
+<br>
 
-* Code to generate dataset can be found at `java-code/src/ex_05/Main.java`
+## Experiment Design
+
+<br>
+
+The data set shows the results of the experiment which consists in the insertion of elements in a collection with different numbers of threads:
+
+Factors:
+
+* `Collection`: Which collection is being measured
+      +  ConcurrentHashMap, SynchronizedMap, CopyOnWriteArrayList, SynchronizedRandomAccessList
+  
+* `Write Level`: Ratio of write/read operations
+      + Level 1: 75% read 25% write
+      + Level 2 = 50% read 50% write
+      + Level 3 = 25% read 75% write
+      + Level 4 = 100% write
+
+  
+* `Number of elements`: Number of elements added to the collection
+      + 50, 100, 150, 200, 250, 300, 350, 400, 450, 500
+    
+Metrics:
+
+* `Total Time`: Time taken to perform a batch of operations
+
+<br>
+
+## Implementation
+
+* Code used to generate dataset can be found at `java-code/src/ex_05/Main.java`
 
 ```{c, eval=FALSE, code = readLines(here::here("java-code/src/ex_05/Main.java"))}
 
 ```
 
-##### The data set shows the results of an experiment in which the performances of 4 collections were measured, the experiment consisted of the insertion of competing reading / writing of elements (between 200-2000) in the collection with different numbers of threads (1, 4, 7 or 10) and with different writing / reading ratios (100/0 - 75/25 - 50/50 - 25/75 respectively) of different amounts of elements.
+<br>
+
+## Result Analysis
+
+<br>
 
 ```{r}
-read_csv(here::here("output/report.csv")) %>%
-  mutate(total_time= total_time / 1000000) -> data
+read_csv(here::here("output/report.csv"),
+         col_types = cols(
+           class = col_character(),
+           elements = col_integer(),
+           total_time = col_double(),
+           threads = col_integer(),
+           write_level = col_integer()),
+         progress = F) %>%
+  mutate(total_time = total_time / 1000000) -> data
 
-glimpse(data)
+data %>%
+  glimpse()
 ```
+
 ```{r}
 data %>%
-  ggplot(aes(y = class, x = total_time)) +
+  ggplot(aes(total_time,class)) +
   geom_point() +
-  facet_wrap(~threads)
+  facet_wrap(~threads, labeller = "label_both") +
+  labs(x="Total Time (ms)",y="Collection")
 ```
-##### By exploring the data more generally, we can easily see the impact that the use of more threads at the same time causes on the performance of certain collections, such as the `CopyOnWriteArrayList` case.
-##### The `SynchronizedRandomAccessList` case, however, seems to have an overall improvement when used with more than one thread, but when this number of theads increases too much, it tends to suffer from the overhead caused by the synchronization work.
-##### Also noteworthy is how map-based collections perform better than list-based collections in all cases.
+
+* Map-based collections perform better than list-based collections in all cases.
+* By exploring the data from a more general point of view, we can easily see the impact that the use of more threads simultaneously causes on the performance of certain collections, such as the `CopyOnWriteArrayList` case.
+
+<br>
+
+* In the `SynchronizedRandomAccessList` case, however: 
+
+    + There seems to happen an overall improvement when used with more than one thread, 
+    + Nonetheless, when this number of theads increases too much, it tends to suffer from the overhead caused by the synchronization work.
+
+<br>
+
+### Number of elements
+
+<br>
 
 ```{r}
 data %>%
   ggplot(aes(y = total_time, x = elements, group=elements)) +
   geom_boxplot() +
-  facet_wrap(~class, scales = "free")
+  facet_wrap(~class, scales = "free") +
+  labs(x="Number of elements", y="Total time (ms)")
 ```
-##### We also see that the growth in the total execution time for the list-based collections grows linearly as the number of elements entered increases as long as the map-based collections appear to be random.
 
-##### Because lists and maps have very different performance, we will keep them in different separate charts from now on.
+* We can see that the total execution time for the **list-based** collections grows linearly with the number of elements inserted 
+* The total execution of map-based collections doesn't seem rather random than related to the number of elements
+
+<br>
+
+> Because lists and maps have very different performance, we will keep them in different separate charts from now on.
+
+<br>
+
+### Write Level
+
+<br>
 
 ```{r}
 data %>%
   filter(class != 'CopyOnWriteArrayList') %>% 
   filter(class != 'SynchronizedRandomAccessList') %>% 
   ggplot(aes(y = class, x = total_time)) +
-  geom_point() + facet_wrap(~write_level)
+  geom_point() + 
+  facet_wrap(~write_level, labeller="label_both") +
+  labs(y="Collection", x="Total time (ms)")
 ```
 
-#### The proportion of writing and reading does not appear to consistently impact the performance of map-based collections as shown below with list-based collections
+* The proportion of writing and reading does not appear to consistently impact the performance of map-based collections as shown below with list-based collections
 
 ```{r}
 data %>%
   filter(class != 'ConcurrentHashMap') %>% 
   filter(class != 'SynchronizedMap') %>% 
   ggplot(aes(y = class, x = total_time)) +
-  geom_point() + facet_wrap(~write_level)
+  geom_point() + 
+  facet_wrap(~write_level, labeller="label_both") +
+  labs(y="Collection", x="Total time (ms)")
 ```
-#### In the lists the proportion of writing impacts greatly by the increase of elements themselves.
+
+* In the lists the proportion of writing impacts greatly by the increase of elements themselves.
+
+<br>
+
+### Number of threads
+
+<br>
 
 ```{r}
 data %>%
@@ -484,9 +566,11 @@ data %>%
   ggplot(aes(x =threads, y = total_time)) +
   scale_x_continuous(breaks=seq(1, 10, 3)) +
   geom_point() +
-  facet_wrap(~class)
+  facet_wrap(~class) +
+  labs(x="Number of threads", y="Total time (ms)")
 ```
-##### In list-based collections, this impact caused by the increase in threads seems much more explicit and following near-linear growth.
+
+* In list-based collections, the impact caused by the increase in number threads seems much more explicit and follows a near-linear growth.
 
 
 ```{r}
@@ -496,9 +580,24 @@ data %>%
   ggplot(aes(x =threads, y = total_time)) +
     scale_x_continuous(breaks=seq(1, 10, 3)) +
   geom_point() +
-  facet_wrap(~class)
+  facet_wrap(~class) +
+  labs(x="Number of threads", y="Total time (ms)")
 ```
 
-##### In map-based collections the number of threads seems to have some impact but it does not follow a pattern, probably caused by the thread synchronization impact.
+*  In map-based collections the number of threads seems to have some impact but it does not follow a pattern, probably caused by the impact of thread synchronization.
 
-#### In general we can conclude that the number of threads impact the performance of the collections, such as CopyOnWriteArrayList that worsens as the number of threads increases and the SynchronizedRandomAccessList that seems to have an improvement when it leaves a unique one for more threads than as the number of threads increases greatly will have their performance degraded as well. Already in map-based collections the impact of the number of theads seems to be smaller and more random, probably caused by moments of locking multiple threads at the same time and synchronization.
+<br>
+
+## Summary
+
+<br>
+
+##### In general we can conclude that for **list-based** collections:
+
+* The number of threads impact the performance of the collections, such as CopyOnWriteArrayList whose performance worsens as the number of threads increases.
+
+* The SynchronizedRandomAccessList whose performance seems to improve when its number of threads increases from a single thread to a few ones. Later, as the number of threads increases greatly their performance degraded.
+
+##### In general we can conclude that for **map-based** collections: 
+
+* The impact of the number of theads seems to be smaller and more random, probably caused by synchronization and moments where multiple threads are locked at the same time. 
