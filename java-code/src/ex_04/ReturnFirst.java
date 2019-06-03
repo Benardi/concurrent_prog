@@ -28,15 +28,15 @@ public class ReturnFirst extends Thread {
 		for (i = 0; i < nthreads; i++) {
 			threads[i] = new ReturnFirst(i);
 		}
-		i = 0;
+		i = 1;
 		long start = System.currentTimeMillis();
-		while (threads[i].isAlive()) {
+		while (threads[i-1].isAlive()) {
 			i += 1;
 			if (System.currentTimeMillis() - start >= TIMEOUT) {
 				return -1;
 			}
-			if (i == nthreads) {
-				i = 0;
+			if (i-1 == nthreads) {
+				i = 1;
 			}
 		}
 		return i;

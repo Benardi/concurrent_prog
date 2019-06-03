@@ -1,20 +1,20 @@
 public class ReturnFirstCombined extends Thread {
 	private static final int TIMEOUT = 16000;
     private int id;
-    private static int time;
+    private int time;
 
     public ReturnFirstCombined(int id) throws InterruptedException {
         this.id = id;
         start();
     }
 
-    public static int getTime() {
+    public int getTime() {
         return time;
     }
 
     public void run() {
         try {
-            ReturnFirstCombined.time = ReturnFirstCombined.request();
+            this.time = ReturnFirstCombined.request();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -35,15 +35,15 @@ public class ReturnFirstCombined extends Thread {
         }
         i = 0;
         long start = System.currentTimeMillis();
-        while (i < nthreads && threads[i].isAlive()) {
+        do {
             if (!threads[i].isAlive()) {
                 total += threads[i].getTime();
                 i++;
             }
             if (System.currentTimeMillis() - start >= TIMEOUT) {
-				return -1;
-			}
-		}
+                return -1;
+            }
+        } while (i < nthreads);
 		return total;
 	}
 
