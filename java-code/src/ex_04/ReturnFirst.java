@@ -17,7 +17,7 @@ public class ReturnFirst extends Thread {
 	}
 
 	static int request() throws InterruptedException {
-		int time = (int) Math.ceil(Math.random() * 30);
+		int time = (int) (1 + Math.random() * 30);
 		ReturnFirst.sleep(time * 1000);
 		return time;
 	}
