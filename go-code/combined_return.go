@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"os"
+	"strconv"
 	"sync"
 	"time"
 )
@@ -42,6 +44,8 @@ func gateway(numReplicas int) int {
 func main() {
 	// set the seed for rand
 	rand.Seed(time.Now().UTC().UnixNano())
-	combinedTime := gateway(3)
+	// convert command line arg to int
+	numReplicas, _ := strconv.Atoi(os.Args[1])
+	combinedTime := gateway(numReplicas)
 	fmt.Printf("Combined return: %d\n", combinedTime)
 }
