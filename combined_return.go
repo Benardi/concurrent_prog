@@ -9,37 +9,32 @@ import (
 
 type firstReturn struct {
 	sync.Mutex
-	cond  *sync.Cond
 	value int
 }
 
-func newFirstReturn() *firstReturn {
-	fstReturn := firstReturn{value: -1}
-	fstReturn.cond = sync.NewCond(&fstReturn)
-	return &fstReturn
-}
-
-func request(id int, fstReturn *firstReturn) {
+func request(id int, fstReturn *firstReturn, wg *sync.WaitGroup) {
 	sleepTime := 1 + rand.Intn(30)
 	fmt.Printf("goroutine %d: sleep %ds\n", id, sleepTime)
 	t := time.Duration(sleepTime) * time.Second
 	time.Sleep(t)
 
 	fstReturn.Lock()
-	fstReturn.value = sleepTime
-	fstReturn.cond.Signal()
+	fstReturn.value += sleepTime
 	fstReturn.Unlock()
+	wg.Done()
 }
 
 func gateway(numReplicas int) int {
-	fstReturn := newFirstReturn()
+	fstReturn := &firstReturn{value: 0}
+
+	var wg sync.WaitGroup
+	wg.Add(numReplicas)
+
 	for i := 1; i <= numReplicas; i++ {
-		go request(i, fstReturn)
+		go request(i, fstReturn, &wg)
 	}
 
-	fstReturn.Lock()
-	fstReturn.cond.Wait()
-	fstReturn.Unlock()
+	wg.Wait()
 
 	return fstReturn.value
 }
@@ -47,6 +42,6 @@ func gateway(numReplicas int) int {
 func main() {
 	// set the seed for rand
 	rand.Seed(time.Now().UTC().UnixNano())
-	fistTime := gateway(3)
-	fmt.Printf("First returned: %d\n", fistTime)
+	combinedTime := gateway(3)
+	fmt.Printf("Combined return: %d\n", combinedTime)
 }
