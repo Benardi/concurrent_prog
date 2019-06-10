@@ -36,9 +36,21 @@ func gateway(numReplicas int) int {
 		go request(i, fstReturn, &wg)
 	}
 
-	wg.Wait()
+	timeout := 16
+	sleepTime := time.Duration(timeout) * time.Second
+	c := make(chan struct{})
 
-	return fstReturn.value
+	go func() {
+		defer close(c)
+		wg.Wait()
+	}()
+
+	select {
+	case <-c:
+		return fstReturn.value
+	case <-time.After(sleepTime):
+		return -1
+	}
 }
 
 func main() {
@@ -47,7 +59,7 @@ func main() {
 	// convert command line arg to int
 	numReplicas, _ := strconv.Atoi(os.Args[1])
 	combinedTime := gateway(numReplicas)
-	if firstTime <= 8 {
+	if combinedTime > 0 {
 		fmt.Printf("Combined return: %d\n", combinedTime)
 	} else {
 		fmt.Printf("Gateway returned -1\n")

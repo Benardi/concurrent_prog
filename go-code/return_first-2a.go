@@ -35,6 +35,17 @@ func request(id int, fstReturn *firstReturn) {
 
 func gateway(numReplicas int) int {
 	fstReturn := newFirstReturn()
+	go func() {
+		timeout := 8
+		sleepTime := time.Duration(timeout) * time.Second
+		time.Sleep(sleepTime)
+
+		fstReturn.Lock()
+		fstReturn.value = -1
+		fstReturn.cond.Signal()
+		fstReturn.Unlock()
+	}()
+
 	for i := 1; i <= numReplicas; i++ {
 		go request(i, fstReturn)
 	}
@@ -52,7 +63,7 @@ func main() {
 	// convert command line arg to int
 	numReplicas, _ := strconv.Atoi(os.Args[1])
 	firstTime := gateway(numReplicas)
-	if firstTime <= 8 {
+	if firstTime > 0 {
 		fmt.Printf("First returned: %d\n", firstTime)
 	} else {
 		fmt.Printf("Gateway returned -1\n")
