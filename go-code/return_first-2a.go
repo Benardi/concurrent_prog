@@ -41,7 +41,6 @@ func gateway(numReplicas int) int {
 		time.Sleep(sleepTime)
 
 		fstReturn.Lock()
-		fstReturn.value = -1
 		fstReturn.cond.Signal()
 		fstReturn.Unlock()
 	}()
