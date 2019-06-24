@@ -60,7 +60,10 @@ func main() {
 	// set the seed for rand
 	rand.Seed(time.Now().UTC().UnixNano())
 	// convert command line arg to int
-	numReplicas, _ := strconv.Atoi(os.Args[1])
+	numReplicas := 2
+	if len(os.Args) > 1 {
+		numReplicas, _ = strconv.Atoi(os.Args[1])
+	}
 	firstTime := gateway(numReplicas)
 	if firstTime > 0 {
 		fmt.Printf("First returned: %d\n", firstTime)

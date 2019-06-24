@@ -45,7 +45,10 @@ func main() {
 	// set the seed for rand
 	rand.Seed(time.Now().UTC().UnixNano())
 	// convert command line arg to int
-	numReplicas, _ := strconv.Atoi(os.Args[1])
+	numReplicas := 2
+	if len(os.Args) > 1 {
+		numReplicas, _ = strconv.Atoi(os.Args[1])
+	}
 	combinedTime := gateway(numReplicas)
 	fmt.Printf("Combined return: %d\n", combinedTime)
 }
