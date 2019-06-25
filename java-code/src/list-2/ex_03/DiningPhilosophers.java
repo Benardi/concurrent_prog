@@ -1,8 +1,9 @@
 
 class DiningPhilosophers {
+	static final int NUM_PHILOSOPHERS = 5;
 	
     public static void main(String[] args) throws Exception { 
-        final DiningPhilosophers.Philosopher[] philosophers = new DiningPhilosophers.Philosopher[50];
+        final DiningPhilosophers.Philosopher[] philosophers = new DiningPhilosophers.Philosopher[NUM_PHILOSOPHERS];
         Object[] forks = new Object[philosophers.length];
  
         for (int i = 0; i < forks.length; i++) {

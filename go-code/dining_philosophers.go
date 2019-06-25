@@ -4,7 +4,9 @@ import (
     "sync"
     "time"
 )
-var fork [5]sync.Mutex
+
+const n_eating = 10
+var fork [n_eating]sync.Mutex
 var exit int
 func phil(id int) {
     for i := 0; i < 2; i++ {
@@ -25,9 +27,9 @@ func phil(id int) {
 }
 func main() {
     fmt.Println("Dining Philosophers Problem")
-    for i := 0; i < 5; i++ {
+    for i := 0; i < n_eating; i++ {
         go phil(i)
     }
-    for exit != 5 { /* loop wait till all threads are over */
+    for exit != n_eating { /* loop wait till all threads are over */
     }
 }
