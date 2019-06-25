@@ -1,9 +1,9 @@
 package main
 import (
   "os"
-  "fmt"
   "time"
   "sync"
+  "strconv"
 )
 
 var wg sync.WaitGroup
@@ -16,13 +16,16 @@ func sub_routine() {
 func main() {
   args := os.Args[1:]
   // Command line argument (Number of goroutines)
-  nroutines := args[0]
+  nroutines, err := strconv.Atoi(args[0])
 
+  if err == nil {
   for i := 0; i < nroutines; i++ {
     wg.Add(1)
     go sub_routine()
   }
 
   wg.Wait()
+
+  }
 
 }

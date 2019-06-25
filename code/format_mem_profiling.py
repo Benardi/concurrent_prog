@@ -29,17 +29,17 @@ def write_content(source_file_path):
                 out_f.write(out_l + '\n')
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--header",type=bool,
-                    help="whether to overwrite output file with header")
+parser.add_argument("--no-header",action='store_true',
+                    help="Don't overwrite output file with header")
 parser.add_argument("--nthreads", type=int,
-                    help="number of threads to be pointed in csv")
+                    help="number of threads to be mentioned in csv")
 parser.add_argument("--impl", type=str,
-                    help="name of impl to be pointed in csv")
+                    help="name of impl to be mentioned in csv")
 parser.add_argument("--source", type=str,
                     help="path of memory profiling source file")
 args = parser.parse_args()
 
-if args.header:
+if args.no_header is False:
     write_header()
 
 impl = args.impl
