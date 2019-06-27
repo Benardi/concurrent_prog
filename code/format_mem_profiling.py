@@ -1,7 +1,7 @@
 import argparse
 import sys
 
-header = "impl,nthreads,snapshot,time,total,mem_heap_B,mem_heap_extra_B,mem_stacks_B"
+header = "impl,nflows,snapshot,time,total_mem,mem_heap_B,mem_heap_extra_B,mem_stacks_B"
 preamble = None
 out_l = ""
 
@@ -40,8 +40,8 @@ def write_content(source_file_path, destination_file_path):
 parser = argparse.ArgumentParser()
 parser.add_argument("--no-header",action='store_true',
                     help="Don't overwrite output file with header")
-parser.add_argument("--nthreads", type=int,
-                    help="number of threads to be mentioned in csv")
+parser.add_argument("--nflows", type=int,
+                    help="number of control flows to be mentioned in csv")
 parser.add_argument("--impl", type=str,
                     help="name of impl to be mentioned in csv")
 parser.add_argument("--source", type=str,
@@ -51,13 +51,13 @@ parser.add_argument("--dest", type=str,
 args = parser.parse_args()
 
 impl = args.impl
-nthreads = args.nthreads
+nflows = args.nflows
 source_f = args.source
 dest_f = args.dest
 
 if args.no_header is False:
     write_header(dest_f)
 
-preamble = "{},{},".format(impl,nthreads)
+preamble = "{},{},".format(impl,nflows)
 
 write_content(source_f,dest_f)

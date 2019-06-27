@@ -1,0 +1,596 @@
+---
+title: "Concurrent Programming - List 2"
+author: José Benardi de Souza Nunes, Gustavo Diniz Monteiro, Ruan Roberto Eloy Silveira
+output: 
+    html_notebook:
+      df_print: paged
+      toc: yes
+      toc_float: yes
+    html_document:
+      df_print: paged
+      toc: yes
+      toc_float: yes
+---
+
+
+```{r, include=TRUE, results='hide', message=F, warning=FALSE}
+library(here)
+library(boot)
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(reshape2)
+library(lubridate)
+
+theme_set(theme_bw())
+```
+
+# Question 1
+
+<br>
+
+***
+
+<br>
+
+
+# Question 2
+
+<br>
+
+***
+
+<br>
+
+# Question 3
+
+<br>
+
+## Load Data
+
+```{r}
+read_csv(here::here("output/q3-l2-results.csv"),
+         col_types = cols(
+           impl = col_character(),
+           nflows = col_integer(),
+           snapshot = col_integer(),
+           time = col_integer(),
+           mem_heap_B = col_integer(),
+           mem_heap_extra_B = col_integer(),
+           mem_stacks_B = col_integer())) %>%
+  mutate(impl = as.factor(impl),
+         nflows = as.factor(nflows)) %>%
+  mutate(impl = recode(impl, golang="Goroutine",
+                       java="Java-Thread")) -> data
+
+data %>%
+  glimpse()
+```
+
+<br>
+
+## Data Description
+
+<br>
+
+* `impl`: Whether it refers to *golang goroutines* or *java threads* 
+
+* `nflows`: Number of triggered *golang goroutines* or *java threads*, sequential flow of control, or simply flow of control, will be term used to describe both in this report.
+
+* `time`: The time it was taken. In this case, the time unit is bytes allocated/deallocated** on the heap and stack(s).
+
+* `total_mem`: The total memory consumption at that point.
+
+* `mem_heap_B`: The number of useful heap bytes allocated at that point. This reflects the number of bytes asked for by the program.
+
+* `mem_heap_extra_B`: The number of extra heap bytes allocated at that point. This reflects the number of bytes allocated in excess of what the program asked for. There are two sources of extra heap bytes.
+
+* `mem_stacks_B`: The size of the memory stack(s).
+
+<br>
+
+### Heap vs Stack
+
+<br>
+
+#####So what's the difference between `memory heap` and `memory stack`?
+
+>**Stack** is used for static memory allocation and **Heap** for dynamic memory allocation, both stored in the computer's RAM
+
+<br>
+
+## Analysis by metric
+
+```{r}
+data %>%
+  ggplot(aes(nflows,mem_heap_B)) +
+  geom_boxplot() +s
+  facet_wrap(~ impl) +
+  labs(x="n(flow of control)",
+       title="Figure 1 - Useful heap bytes by n(flow of control)")
+```
+
+* There's substantial indication that overall *java-threads* consume many more *useful heap bytes*, in other words they demand the dynamic allocation of more memory bytes.
+
+```{r}
+data %>%
+  ggplot(aes(nflows,mem_heap_extra_B)) +
+  geom_boxplot() +
+  facet_wrap(~ impl) +
+  labs(x="n(flow of control)",
+       title="Figure 2 - Extra heap bytes by n(flow of control)")
+```
+
+
+* In the chart we see clear evidence that overall *java-threads* consume many more *extra heap bytes*.
+    + According to [massif docs](http://valgrind.org/docs/manual/ms-manual.html#ms-manual.anexample) usually the memory allocator demands *extra heap bytes* for administrative reasons, and to ensure block alignment.
+
+```{r}
+data %>%
+  ggplot(aes(nflows,mem_stacks_B)) +
+  geom_boxplot() +
+  facet_wrap(~ impl) +
+  labs(x="n(flow of control)",
+       title="Figure 3 - Stack bytes by n(flow of control)")
+```
+
+* In the chart we see clear evidence that overall *Goroutines* consume many more *stack bytes*, in other words they demand more static memory allocation.
+
+
+```{r}
+data %>%
+  ggplot(aes(nflows,total_mem)) +
+  geom_boxplot() +
+  facet_wrap(~ impl) +
+  labs(x="n(flow of control)",
+       title="Figure 4 - Stack bytes by n(flow of control)")
+```
+
+* In this chart we get a clear picture that *Java-Threads* have a larger total memory consumption than *Goroutines*  across all testes number of flows of control.
+
+<br>
+
+***
+
+<br>
+
+## Analysis by number of flows of control
+
+<br>
+
+In order to visualize data from the point of view of n(flow of control) let's reshape the data.
+
+```{r}
+data %>%
+  as_data_frame() %>%
+  melt(id.vars=c("impl","snapshot","nflows","time"),
+       measure.vars=c("total_mem","mem_heap_B",
+                      "mem_heap_extra_B","mem_stacks_B")) -> melt_data
+
+melt_data %>% 
+  sample_n(10)
+```
+
+<br>
+
+### n(flow of control) = 25
+
+```{r}
+melt_data %>%
+  filter(nflows == 25) %>%
+  filter(variable %in% c("total_mem","mem_heap_B")) %>%
+  ggplot(aes(snapshot,value, color=impl)) +
+  geom_segment(aes(x = snapshot, y = 0,
+                     xend = snapshot, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="Nth snapshot (point in time)",
+       title="Figure 5.1 - Consumed memory by point in time (snapshot)")
+```
+
+* Results concur those of Figure 1 and Figure 4.
+
+```{r}
+melt_data %>%
+  filter(nflows == 25) %>%
+  filter(variable %in% c("total_mem","mem_heap_B")) %>%
+  ggplot(aes(time,value, color=impl)) +
+  geom_segment(aes(x = time, y = 0,
+                     xend = time, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="time (B)",
+       title="Figure 5.2 - Consumed memory by point in time (Bytes)")
+```
+
+* Using bytes as time unit the *Goroutines*' executions were longer. 
+* In terms of consumed memory, the results concur those of Figure 5.1
+
+```{r}
+melt_data %>%
+  filter(nflows == 25) %>%
+  filter(variable %in% c("mem_heap_extra_B","mem_stacks_B")) %>%
+  ggplot(aes(snapshot,value, color=impl)) +
+  geom_segment(aes(x = snapshot, y = 0,
+                     xend = snapshot, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="Nth snapshot (point in time)",
+       title="Figure 5.3 - Consumed memory by point in time (snapshot)")
+```
+
+* Results concur those of Figure 2 and Figure 3.
+
+```{r}
+melt_data %>%
+  filter(nflows == 25) %>%
+  filter(variable %in% c("mem_heap_extra_B","mem_stacks_B")) %>%
+  ggplot(aes(time,value, color=impl)) +
+  geom_segment(aes(x = time, y = 0,
+                     xend = time, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="time (B)",
+       title="Figure 5.4 - Consumed memory by point in time (Bytes)")
+```
+
+* Using bytes as time unit the *Goroutines*' executions were longer. 
+* In terms of consumed memory, the results concur those of Figure 5.3
+    + Results for *mem_heap_extra_B* are less clear here, but crossing the results by snapshot, the evidence supports the idea that *Java-Threads* consumed more. 
+
+<br>
+
+### n(flow of control) = 50
+
+```{r}
+melt_data %>%
+  filter(nflows == 50) %>%
+  filter(variable %in% c("total_mem","mem_heap_B")) %>%
+  ggplot(aes(snapshot,value, color=impl)) +
+  geom_segment(aes(x = snapshot, y = 0,
+                     xend = snapshot, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="Nth snapshot (point in time)",
+       title="Figure 6.1 - Consumed memory by point in time (snapshot)")
+```
+
+* Results concur those of Figure 1 and Figure 4.
+
+```{r}
+melt_data %>%
+  filter(nflows == 50) %>%
+  filter(variable %in% c("total_mem","mem_heap_B")) %>%
+  ggplot(aes(time,value, color=impl)) +
+  geom_segment(aes(x = time, y = 0,
+                     xend = time, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="time (B)",
+       title="Figure 6.2 - Consumed memory by point in time (Bytes)")
+```
+
+* Using bytes as time unit the *Goroutines*' executions were longer. 
+* In terms of consumed memory, the results concur those of Figure 6.1
+
+```{r}
+melt_data %>%
+  filter(nflows == 50) %>%
+  filter(variable %in% c("mem_heap_extra_B","mem_stacks_B")) %>%
+  ggplot(aes(snapshot,value, color=impl)) +
+  geom_segment(aes(x = snapshot, y = 0,
+                     xend = snapshot, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="Nth snapshot (point in time)",
+       title="Figure 6.3 - Consumed memory by point in time (snapshot)")
+```
+
+* Results concur those of Figure 2 and Figure 3.
+
+```{r}
+melt_data %>%
+  filter(nflows == 50) %>%
+  filter(variable %in% c("mem_heap_extra_B","mem_stacks_B")) %>%
+  ggplot(aes(time,value, color=impl)) +
+  geom_segment(aes(x = time, y = 0,
+                     xend = time, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="time (B)",
+       title="Figure 6.4 - Consumed memory by point in time (Bytes)")
+```
+
+* Using bytes as time unit the *Goroutines*' executions were longer. 
+* In terms of consumed memory, the results concur those of Figure 6.3
+
+<br>
+
+### n(flow of control) = 100
+
+```{r}
+melt_data %>%
+  filter(nflows == 100) %>%
+  filter(variable %in% c("total_mem","mem_heap_B")) %>%
+  ggplot(aes(snapshot,value, color=impl)) +
+  geom_segment(aes(x = snapshot, y = 0,
+                     xend = snapshot, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="Nth snapshot (point in time)",
+       title="Figure 7.1 - Consumed memory by point in time (snapshot)")
+```
+
+* Results clearly concur those of Figure 1 and Figure 4.
+
+```{r}
+melt_data %>%
+  filter(nflows == 100) %>%
+  filter(variable %in% c("total_mem","mem_heap_B")) %>%
+  ggplot(aes(time,value, color=impl)) +
+  geom_segment(aes(x = time, y = 0,
+                     xend = time, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="time (B)",
+       title="Figure 7.2 - Consumed memory by point in time (Bytes)")
+```
+
+* Using bytes as time unit the *Goroutines*' executions were longer. 
+* In terms of consumed memory, the results concur those of Figure 7.1
+
+```{r}
+melt_data %>%
+  filter(nflows == 100) %>%
+  filter(variable %in% c("mem_heap_extra_B","mem_stacks_B")) %>%
+  ggplot(aes(snapshot,value, color=impl)) +
+  geom_segment(aes(x = snapshot, y = 0,
+                     xend = snapshot, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="Nth snapshot (point in time)",
+       title="Figure 7.3 - Consumed memory by point in time (snapshot)")
+```
+
+* Results concur those of Figure 2 and Figure 3.
+    + Although the higher cost in static memory for *Goroutines* is clear, the *Java-Threads* are increasing in consumption, especially at the time of the last snapshots.
+
+```{r}
+melt_data %>%
+  filter(nflows == 100) %>%
+  filter(variable %in% c("mem_heap_extra_B","mem_stacks_B")) %>%
+  ggplot(aes(time,value, color=impl)) +
+  geom_segment(aes(x = time, y = 0,
+                     xend = time, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="time (B)",
+       title="Figure 7.4 - Consumed memory by point in time (Bytes)")
+```
+
+* Using bytes as time unit the *Goroutines*' executions were longer. 
+* In terms of consumed memory, the results concur those of Figure 7.3
+
+<br>
+
+### n(flow of control) = 200
+
+```{r}
+melt_data %>%
+  filter(nflows == 200) %>%
+  filter(variable %in% c("total_mem","mem_heap_B")) %>%
+  ggplot(aes(snapshot,value, color=impl)) +
+  geom_segment(aes(x = snapshot, y = 0,
+                     xend = snapshot, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="Nth snapshot (point in time)",
+       title="Figure 8.1 - Consumed memory by point in time (snapshot)")
+```
+
+* Results clearly concur those of Figure 1 and Figure 4.
+
+```{r}
+melt_data %>%
+  filter(nflows == 200) %>%
+  filter(variable %in% c("total_mem","mem_heap_B")) %>%
+  ggplot(aes(time,value, color=impl)) +
+  geom_segment(aes(x = time, y = 0,
+                     xend = time, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="time (B)",
+       title="Figure 8.2 - Consumed memory by point in time (Bytes)")
+```
+
+* Using bytes as time unit the *Goroutines*' executions were longer. 
+* In terms of consumed memory, the results concur those of Figure 8.1
+
+```{r}
+melt_data %>%
+  filter(nflows == 200) %>%
+  filter(variable %in% c("mem_heap_extra_B","mem_stacks_B")) %>%
+  ggplot(aes(snapshot,value, color=impl)) +
+  geom_segment(aes(x = snapshot, y = 0,
+                     xend = snapshot, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="Nth snapshot (point in time)",
+       title="Figure 8.3 - Consumed memory by point in time (snapshot)")
+```
+
+* Results concur those of Figure 2 and Figure 3.
+* The cost in static memory is higher for *Goroutines*.
+    + The trend of consumption increase for *Java-Threads* strengthens, especially at the time of the last snapshots.
+
+```{r}
+melt_data %>%
+  filter(nflows == 200) %>%
+  filter(variable %in% c("mem_heap_extra_B","mem_stacks_B")) %>%
+  ggplot(aes(time,value, color=impl)) +
+  geom_segment(aes(x = time, y = 0,
+                     xend = time, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="time (B)",
+       title="Figure 8.4 - Consumed memory by point in time (Bytes)")
+```
+
+* Using bytes as time unit the *Goroutines*' executions were longer. 
+* In terms of consumed memory, the results concur those of Figure 8.3
+    + Results for *mem_heap_extra_B* are less clear here, but crossing the results by snapshot, the evidence supports the idea that *Java-Threads* consumed more. 
+
+<br>
+
+### n(flow of control) = 400
+
+```{r}
+melt_data %>%
+  filter(nflows == 400) %>%
+  filter(variable %in% c("total_mem","mem_heap_B")) %>%
+  ggplot(aes(snapshot,value, color=impl)) +
+  geom_segment(aes(x = snapshot, y = 0,
+                     xend = snapshot, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="Nth snapshot (point in time)",
+       title="Figure 9.1 - Consumed memory by point in time (snapshot)")
+```
+
+* The *Goroutine* execution has more snapshots but this is overshadowed by the much larger memory consumption of the *Java-Threads*
+* Results concur those of Figure 1 and Figure 4 despite the increase in snapshots for the *Goroutine* execution.
+
+```{r}
+melt_data %>%
+  filter(nflows == 400) %>%
+  filter(variable %in% c("total_mem","mem_heap_B")) %>%
+  ggplot(aes(time,value, color=impl)) +
+  geom_segment(aes(x = time, y = 0,
+                     xend = time, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="time (B)",
+       title="Figure 9.2 - Consumed memory by point in time (Bytes)")
+```
+
+* Using bytes as time unit the *Goroutines*' executions were longer. 
+* In terms of consumed memory, the results concur those of Figure 9.1
+
+```{r}
+melt_data %>%
+  filter(nflows == 400) %>%
+  filter(variable %in% c("mem_heap_extra_B","mem_stacks_B")) %>%
+  ggplot(aes(snapshot,value, color=impl)) +
+  geom_segment(aes(x = snapshot, y = 0,
+                     xend = snapshot, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="Nth snapshot (point in time)",
+       title="Figure 9.3 - Consumed memory by point in time (snapshot)")
+```
+
+* Results concur those of Figure 2 and Figure 3.
+* The cost in static memory is higher for *Goroutines* although it becomes less clear in this instance.
+    + The trend of consumption increase for *Java-Threads* strengthens, especially at the time of its last snapshots.
+
+```{r}
+melt_data %>%
+  filter(nflows == 400) %>%
+  filter(variable %in% c("mem_heap_extra_B","mem_stacks_B")) %>%
+  ggplot(aes(time,value, color=impl)) +
+  geom_segment(aes(x = time, y = 0,
+                     xend = time, yend = value),
+                 color = "grey50", size=0.1) +
+  geom_point() +
+  facet_wrap(~ variable) +
+  theme(legend.position = "bottom") +
+  labs(y="Consumed memory (B)",
+       x="time (B)",
+       title="Figure 9.4 - Consumed memory by point in time (Bytes)")
+```
+
+* Using bytes as time unit the *Goroutines*' executions were longer. 
+* In terms of consumed stack memory much like the results of Figure 8.3 the difference becomes less clear, though it seems like *Goroutines* are still costlier.
+
+<br>
+
+***
+
+<br>
+
+## Summary
+
+* From the analysis by metric:
+    + *Goroutines* consume more stack memory (static).
+    + *Java-Threads* consume more heap memory (dynamic). 
+    + In total, *Java-Threads* consumed more memory.
+
+> In total, *Java-Threads* consumed more memory.
+
+<br>
+
+* From the analysis by n(flow of control):
+    + The results from the previous analysis were mostly concurred.
+    + Using bytes as time unit the *Goroutines*' executions were longer
+    + The higher static memory consumption from the *Goroutines* became less clear as the number of n(flow of control) increased
+    
+>  The results from the previous analysis were mostly concurred.
+
+
