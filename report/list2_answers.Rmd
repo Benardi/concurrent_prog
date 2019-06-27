@@ -2,16 +2,14 @@
 title: "Concurrent Programming - List 2"
 author: José Benardi de Souza Nunes, Gustavo Diniz Monteiro, Ruan Roberto Eloy Silveira
 output: 
-    html_notebook:
-      df_print: paged
-      toc: yes
-      toc_float: yes
     html_document:
       df_print: paged
       toc: yes
       toc_float: yes
 ---
 
+<br>
+<br>
 
 ```{r, include=TRUE, results='hide', message=F, warning=FALSE}
 library(here)
@@ -25,7 +23,35 @@ library(lubridate)
 theme_set(theme_bw())
 ```
 
+<br>
+
+***
+
+<br>
+
 # Question 1
+
+## Returns first result
+
+<br>
+
+* Code can be found at `go-code/first_return.go`
+
+```{c, eval=FALSE, code = readLines(here::here("go-code/first_return.go"))}
+
+```
+
+<br>
+
+## Returns combined result
+
+<br>
+
+* Code can be found at `go-code/combined_return.go`
+
+```{c, eval=FALSE, code = readLines(here::here("go-code/combined_return.go"))}
+
+```
 
 <br>
 
@@ -33,8 +59,32 @@ theme_set(theme_bw())
 
 <br>
 
-
 # Question 2
+
+
+
+## Returns first result
+
+<br>
+
+* Code can be found at `go-code/return_first-2a.go`
+
+
+```{c, eval=FALSE, code = readLines(here::here("go-code/return_first-2a.go"))}
+
+```
+
+<br>
+
+## Returns combined result
+
+<br>
+
+* Code can be found at `go-code/return_first-2b.go`
+
+```{c, eval=FALSE, code = readLines(here::here("go-code/combined_return-2b.go"))}
+
+```
 
 <br>
 
@@ -46,7 +96,19 @@ theme_set(theme_bw())
 
 <br>
 
-## Load Data
+## Employed profiling tool
+
+<br>
+
+> [Massif](http://valgrind.org/docs/manual/) is a heap profiler. It measures how much heap memory your program uses. This includes both the useful space, and the extra bytes allocated for book-keeping and alignment purposes. It can also measure the size of a program's stack(s).
+
+<br>
+
+## Data
+
+<br>
+
+### Load Data
 
 ```{r}
 read_csv(here::here("output/q3-l2-results.csv"),
@@ -69,7 +131,7 @@ data %>%
 
 <br>
 
-## Data Description
+### Data Description
 
 <br>
 
@@ -89,7 +151,7 @@ data %>%
 
 <br>
 
-### Heap vs Stack
+#### Heap vs Stack
 
 <br>
 
@@ -101,16 +163,20 @@ data %>%
 
 ## Analysis by metric
 
+<br>
+
 ```{r}
 data %>%
   ggplot(aes(nflows,mem_heap_B)) +
-  geom_boxplot() +s
+  geom_boxplot() +
   facet_wrap(~ impl) +
   labs(x="n(flow of control)",
        title="Figure 1 - Useful heap bytes by n(flow of control)")
 ```
 
 * There's substantial indication that overall *java-threads* consume many more *useful heap bytes*, in other words they demand the dynamic allocation of more memory bytes.
+
+<br>
 
 ```{r}
 data %>%
@@ -125,6 +191,8 @@ data %>%
 * In the chart we see clear evidence that overall *java-threads* consume many more *extra heap bytes*.
     + According to [massif docs](http://valgrind.org/docs/manual/ms-manual.html#ms-manual.anexample) usually the memory allocator demands *extra heap bytes* for administrative reasons, and to ensure block alignment.
 
+<br>
+
 ```{r}
 data %>%
   ggplot(aes(nflows,mem_stacks_B)) +
@@ -136,6 +204,7 @@ data %>%
 
 * In the chart we see clear evidence that overall *Goroutines* consume many more *stack bytes*, in other words they demand more static memory allocation.
 
+<br>
 
 ```{r}
 data %>%
@@ -173,7 +242,9 @@ melt_data %>%
 
 <br>
 
-### n(flow of control) = 25
+#### n(flow of control) = 25
+
+<br>
 
 ```{r}
 melt_data %>%
@@ -192,6 +263,8 @@ melt_data %>%
 ```
 
 * Results concur those of Figure 1 and Figure 4.
+
+<br>
 
 ```{r}
 melt_data %>%
@@ -212,6 +285,8 @@ melt_data %>%
 * Using bytes as time unit the *Goroutines*' executions were longer. 
 * In terms of consumed memory, the results concur those of Figure 5.1
 
+<br>
+
 ```{r}
 melt_data %>%
   filter(nflows == 25) %>%
@@ -229,6 +304,8 @@ melt_data %>%
 ```
 
 * Results concur those of Figure 2 and Figure 3.
+
+<br>
 
 ```{r}
 melt_data %>%
@@ -252,7 +329,9 @@ melt_data %>%
 
 <br>
 
-### n(flow of control) = 50
+#### n(flow of control) = 50
+
+<br>
 
 ```{r}
 melt_data %>%
@@ -271,6 +350,8 @@ melt_data %>%
 ```
 
 * Results concur those of Figure 1 and Figure 4.
+
+<br>
 
 ```{r}
 melt_data %>%
@@ -291,6 +372,8 @@ melt_data %>%
 * Using bytes as time unit the *Goroutines*' executions were longer. 
 * In terms of consumed memory, the results concur those of Figure 6.1
 
+<br>
+
 ```{r}
 melt_data %>%
   filter(nflows == 50) %>%
@@ -308,6 +391,8 @@ melt_data %>%
 ```
 
 * Results concur those of Figure 2 and Figure 3.
+
+<br>
 
 ```{r}
 melt_data %>%
@@ -330,7 +415,9 @@ melt_data %>%
 
 <br>
 
-### n(flow of control) = 100
+#### n(flow of control) = 100
+
+<br>
 
 ```{r}
 melt_data %>%
@@ -349,6 +436,8 @@ melt_data %>%
 ```
 
 * Results clearly concur those of Figure 1 and Figure 4.
+
+<br>
 
 ```{r}
 melt_data %>%
@@ -369,6 +458,8 @@ melt_data %>%
 * Using bytes as time unit the *Goroutines*' executions were longer. 
 * In terms of consumed memory, the results concur those of Figure 7.1
 
+<br>
+
 ```{r}
 melt_data %>%
   filter(nflows == 100) %>%
@@ -387,6 +478,8 @@ melt_data %>%
 
 * Results concur those of Figure 2 and Figure 3.
     + Although the higher cost in static memory for *Goroutines* is clear, the *Java-Threads* are increasing in consumption, especially at the time of the last snapshots.
+
+<br>
 
 ```{r}
 melt_data %>%
@@ -409,7 +502,9 @@ melt_data %>%
 
 <br>
 
-### n(flow of control) = 200
+#### n(flow of control) = 200
+
+<br>
 
 ```{r}
 melt_data %>%
@@ -428,6 +523,8 @@ melt_data %>%
 ```
 
 * Results clearly concur those of Figure 1 and Figure 4.
+
+<br>
 
 ```{r}
 melt_data %>%
@@ -448,6 +545,8 @@ melt_data %>%
 * Using bytes as time unit the *Goroutines*' executions were longer. 
 * In terms of consumed memory, the results concur those of Figure 8.1
 
+<br>
+
 ```{r}
 melt_data %>%
   filter(nflows == 200) %>%
@@ -467,6 +566,8 @@ melt_data %>%
 * Results concur those of Figure 2 and Figure 3.
 * The cost in static memory is higher for *Goroutines*.
     + The trend of consumption increase for *Java-Threads* strengthens, especially at the time of the last snapshots.
+
+<br>
 
 ```{r}
 melt_data %>%
@@ -490,7 +591,9 @@ melt_data %>%
 
 <br>
 
-### n(flow of control) = 400
+#### n(flow of control) = 400
+
+<br>
 
 ```{r}
 melt_data %>%
@@ -511,6 +614,8 @@ melt_data %>%
 * The *Goroutine* execution has more snapshots but this is overshadowed by the much larger memory consumption of the *Java-Threads*
 * Results concur those of Figure 1 and Figure 4 despite the increase in snapshots for the *Goroutine* execution.
 
+<br>
+
 ```{r}
 melt_data %>%
   filter(nflows == 400) %>%
@@ -529,6 +634,8 @@ melt_data %>%
 
 * Using bytes as time unit the *Goroutines*' executions were longer. 
 * In terms of consumed memory, the results concur those of Figure 9.1
+
+<br>
 
 ```{r}
 melt_data %>%
@@ -549,6 +656,8 @@ melt_data %>%
 * Results concur those of Figure 2 and Figure 3.
 * The cost in static memory is higher for *Goroutines* although it becomes less clear in this instance.
     + The trend of consumption increase for *Java-Threads* strengthens, especially at the time of its last snapshots.
+
+<br>
 
 ```{r}
 melt_data %>%
@@ -587,10 +696,8 @@ melt_data %>%
 <br>
 
 * From the analysis by n(flow of control):
-    + The results from the previous analysis were mostly concurred.
+    + Overall the results from the previous analysis were concurred.
     + Using bytes as time unit the *Goroutines*' executions were longer
     + The higher static memory consumption from the *Goroutines* became less clear as the number of n(flow of control) increased
     
->  The results from the previous analysis were mostly concurred.
-
-
+> Overall the results from the previous analysis were concurred.
