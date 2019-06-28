@@ -652,7 +652,7 @@ melt_data %&gt;%
   sample_n(10)</code></pre>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["impl"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["snapshot"],"name":[2],"type":["int"],"align":["right"]},{"label":["nflows"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["time"],"name":[4],"type":["int"],"align":["right"]},{"label":["variable"],"name":[5],"type":["fctr"],"align":["left"]},{"label":["value"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"Goroutine","2":"7","3":"50","4":"98505928","5":"mem_stacks_B","6":"100648","_rn_":"2230"},{"1":"Goroutine","2":"25","3":"200","4":"299850680","5":"mem_heap_extra_B","6":"425","_rn_":"1824"},{"1":"Java-Thread","2":"30","3":"400","4":"253330952","5":"total_mem","6":"18598328","_rn_":"665"},{"1":"Java-Thread","2":"6","3":"100","4":"32577208","5":"mem_heap_extra_B","6":"12632","_rn_":"1714"},{"1":"Goroutine","2":"29","3":"50","4":"362495920","5":"mem_stacks_B","6":"302864","_rn_":"2252"},{"1":"Java-Thread","2":"86","3":"100","4":"362275816","5":"mem_heap_extra_B","6":"50864","_rn_":"1794"},{"1":"Java-Thread","2":"52","3":"400","4":"429416376","5":"total_mem","6":"24072536","_rn_":"687"},{"1":"Goroutine","2":"11","3":"100","4":"141611056","5":"total_mem","6":"180768","_rn_":"266"},{"1":"Goroutine","2":"56","3":"25","4":"657440752","5":"mem_heap_extra_B","6":"433","_rn_":"1445"},{"1":"Java-Thread","2":"19","3":"400","4":"157781752","5":"mem_heap_B","6":"18436767","_rn_":"1348"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["impl"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["snapshot"],"name":[2],"type":["int"],"align":["right"]},{"label":["nflows"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["time"],"name":[4],"type":["int"],"align":["right"]},{"label":["variable"],"name":[5],"type":["fctr"],"align":["left"]},{"label":["value"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"Goroutine","2":"42","3":"50","4":"520979272","5":"mem_stacks_B","6":"514600","_rn_":"2265"},{"1":"Java-Thread","2":"33","3":"400","4":"281629672","5":"mem_stacks_B","6":"43136","_rn_":"2750"},{"1":"Java-Thread","2":"0","3":"400","4":"0","5":"mem_heap_extra_B","6":"0","_rn_":"2023"},{"1":"Java-Thread","2":"15","3":"100","4":"80844696","5":"mem_heap_B","6":"2920419","_rn_":"1029"},{"1":"Goroutine","2":"73","3":"400","4":"600819784","5":"total_mem","6":"634200","_rn_":"623"},{"1":"Goroutine","2":"16","3":"200","4":"198338104","5":"total_mem","6":"193336","_rn_":"427"},{"1":"Java-Thread","2":"0","3":"25","4":"0","5":"mem_stacks_B","6":"0","_rn_":"2152"},{"1":"Goroutine","2":"37","3":"200","4":"458305696","5":"mem_heap_extra_B","6":"425","_rn_":"1836"},{"1":"Goroutine","2":"24","3":"50","4":"297864736","5":"total_mem","6":"209360","_rn_":"165"},{"1":"Java-Thread","2":"31","3":"50","4":"210626112","5":"mem_heap_extra_B","6":"24152","_rn_":"1616"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p><br></p>
@@ -1092,6 +1092,17 @@ melt_data %&gt;%
 <blockquote>
 <p>Overall the results from the previous analysis were concurred.</p>
 </blockquote>
+<p><br></p>
+<div id="conclusions" class="section level3">
+<h3>Conclusions</h3>
+<p><br></p>
+<div id="a-reasoning-that-may-partly-explain-the-results-seen-in-this-report-is-as-follows" class="section level4">
+<h4>A reasoning that may partly explain the results seen in this report, is as follows:</h4>
+<blockquote>
+<p>Java’s inherent Object Oriented paradigm produces references to objects and their types. For this reason Java produces entities of composite type, which implies in more dynamic allocation. This, in turn would explain the high memory consumption of the <em>Java-Threads</em>. Golang, in the other hand succeds in keeping more things in stack (less memory), as it produces less things of composite type.</p>
+</blockquote>
+</div>
+</div>
 </div>
 </div>
 

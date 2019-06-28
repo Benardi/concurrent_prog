@@ -3,6 +3,11 @@ title: "Concurrent Programming - List 2"
 author: José Benardi de Souza Nunes, Gustavo Diniz Monteiro, Ruan Roberto Eloy Silveira
 output: 
     html_document:
+      
+      df_print: paged
+      toc: yes
+      toc_float: yes
+    html_notebook:
       df_print: paged
       toc: yes
       toc_float: yes
@@ -701,3 +706,14 @@ melt_data %>%
     + The higher static memory consumption from the *Goroutines* became less clear as the number of n(flow of control) increased
     
 > Overall the results from the previous analysis were concurred.
+
+<br>
+
+### Conclusions
+
+<br>
+
+#### A reasoning that may partly explain the results seen in this report, is as follows: 
+
+> Java's inherent Object Oriented paradigm produces references to objects and their types. For this reason Java produces entities of composite type, which implies in more dynamic allocation. This, in turn would explain the high memory consumption of the *Java-Threads*.
+Golang, in the other hand succeds in keeping more things in stack (less memory), as it produces less things of composite type.
