@@ -30,7 +30,7 @@ Now, simply run the Bash script `code/perf_exp.sh`:
  bash ./code/perf_exp.sh
 ```
 
-The resulting C.S.V file can be found at `output/perf_result.csv`
+* The resulting C.S.V file can be found at `output/perf_result.csv`
 
 <br>
 
@@ -55,6 +55,19 @@ Now, run the following Bash script to process the logs into a C.S.V file:
 ```
  python ./code/format_mem_profiling.py -h
 ```
+
+<br>
+
+### Experiment on Collections' performance
+
+Run the following Bash script to produce the results:
+
+```
+ bash ./code/collection_perf.sh
+```
+
+* The resulting C.S.V file can be found at `output/report.csv`
+* The Bash script invokes the Java script `java-code/src/list-1/ex_05/Main.java`.
 
 <br>
 
