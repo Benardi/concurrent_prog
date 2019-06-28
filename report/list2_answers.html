@@ -518,6 +518,86 @@ func main() {
 <div id="question-3" class="section level1">
 <h1>Question 3</h1>
 <p><br></p>
+<div id="implementation" class="section level2">
+<h2>Implementation</h2>
+<p><br></p>
+<div id="java-thread-implementation" class="section level3">
+<h3>Java-Thread implementation</h3>
+<p><br></p>
+<ul>
+<li>Code can be found at <code>code/CreateNThreads.java</code></li>
+</ul>
+<pre class="c"><code>
+public class CreateNThreads {
+
+    public static void main(String[] args) {
+        int nthreads = Integer.parseInt(args[0]);
+
+        Thread[] threads = new Thread[nthreads];
+        for (int i = 0; i &lt; threads.length; i++) {
+            threads[i] = new Thread(new Runnable() {
+                public void run() {
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+            threads[i].start();
+        }
+
+        // wait for the threads running in the background to finish
+        for (Thread thread : threads) {
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}</code></pre>
+</div>
+<div id="goroutine-implementation" class="section level3">
+<h3>Goroutine implementation</h3>
+<p><br></p>
+<ul>
+<li>Code can be found at <code>go-code/goroutines.go</code></li>
+</ul>
+<pre class="c"><code>package main
+import (
+  &quot;os&quot;
+  &quot;time&quot;
+  &quot;sync&quot;
+  &quot;strconv&quot;
+)
+
+var wg sync.WaitGroup
+
+func sub_routine() {
+  defer wg.Done()
+  time.Sleep(3 * time.Second)
+}
+
+func main() {
+  args := os.Args[1:]
+  // Command line argument (Number of goroutines)
+  nroutines, err := strconv.Atoi(args[0])
+
+  if err == nil {
+  for i := 0; i &lt; nroutines; i++ {
+    wg.Add(1)
+    go sub_routine()
+  }
+
+  wg.Wait()
+
+  }
+
+}</code></pre>
+<p><br></p>
+</div>
+</div>
 <div id="employed-profiling-tool" class="section level2">
 <h2>Employed profiling tool</h2>
 <p><br></p>
@@ -652,7 +732,7 @@ melt_data %&gt;%
   sample_n(10)</code></pre>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["impl"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["snapshot"],"name":[2],"type":["int"],"align":["right"]},{"label":["nflows"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["time"],"name":[4],"type":["int"],"align":["right"]},{"label":["variable"],"name":[5],"type":["fctr"],"align":["left"]},{"label":["value"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"Goroutine","2":"42","3":"50","4":"520979272","5":"mem_stacks_B","6":"514600","_rn_":"2265"},{"1":"Java-Thread","2":"33","3":"400","4":"281629672","5":"mem_stacks_B","6":"43136","_rn_":"2750"},{"1":"Java-Thread","2":"0","3":"400","4":"0","5":"mem_heap_extra_B","6":"0","_rn_":"2023"},{"1":"Java-Thread","2":"15","3":"100","4":"80844696","5":"mem_heap_B","6":"2920419","_rn_":"1029"},{"1":"Goroutine","2":"73","3":"400","4":"600819784","5":"total_mem","6":"634200","_rn_":"623"},{"1":"Goroutine","2":"16","3":"200","4":"198338104","5":"total_mem","6":"193336","_rn_":"427"},{"1":"Java-Thread","2":"0","3":"25","4":"0","5":"mem_stacks_B","6":"0","_rn_":"2152"},{"1":"Goroutine","2":"37","3":"200","4":"458305696","5":"mem_heap_extra_B","6":"425","_rn_":"1836"},{"1":"Goroutine","2":"24","3":"50","4":"297864736","5":"total_mem","6":"209360","_rn_":"165"},{"1":"Java-Thread","2":"31","3":"50","4":"210626112","5":"mem_heap_extra_B","6":"24152","_rn_":"1616"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["impl"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["snapshot"],"name":[2],"type":["int"],"align":["right"]},{"label":["nflows"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["time"],"name":[4],"type":["int"],"align":["right"]},{"label":["variable"],"name":[5],"type":["fctr"],"align":["left"]},{"label":["value"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"Java-Thread","2":"25","3":"200","4":"162302408","5":"mem_heap_extra_B","6":"22427","_rn_":"1889"},{"1":"Goroutine","2":"54","3":"50","4":"599211184","5":"mem_heap_B","6":"3927","_rn_":"889"},{"1":"Java-Thread","2":"18","3":"100","4":"96209440","5":"mem_heap_extra_B","6":"17021","_rn_":"1726"},{"1":"Java-Thread","2":"57","3":"50","4":"363524576","5":"mem_heap_extra_B","6":"44115","_rn_":"1642"},{"1":"Java-Thread","2":"15","3":"400","4":"122378384","5":"mem_heap_B","6":"18305418","_rn_":"1344"},{"1":"Goroutine","2":"13","3":"400","4":"149883184","5":"total_mem","6":"189728","_rn_":"563"},{"1":"Goroutine","2":"47","3":"100","4":"568928784","5":"mem_heap_B","6":"3639","_rn_":"996"},{"1":"Java-Thread","2":"26","3":"400","4":"217862216","5":"total_mem","6":"18538904","_rn_":"661"},{"1":"Java-Thread","2":"55","3":"400","4":"443625784","5":"mem_heap_B","6":"22936866","_rn_":"1384"},{"1":"Java-Thread","2":"87","3":"100","4":"364075592","5":"mem_heap_extra_B","6":"56224","_rn_":"1795"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p><br></p>
