@@ -1,0 +1,2299 @@
+desc: --time-unit=B --stacks=yes
+cmd: java DiningPhilosophers
+time_unit: B
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=3282280
+mem_heap_B=10032
+mem_heap_extra_B=424
+mem_stacks_B=19088
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=8287344
+mem_heap_B=95151
+mem_heap_extra_B=1329
+mem_stacks_B=20320
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=12957656
+mem_heap_B=196802
+mem_heap_extra_B=9646
+mem_stacks_B=21256
+heap_tree=detailed
+n6: 196802 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n7: 94948 0x66D30FB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+  n4: 40480 0x60D24E7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n6: 22600 0x6265573: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 10560 0x62648EE: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 10560 0x68543E0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 10560 0x6854680: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 10560 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 10560 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 10560 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 10560 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 10560 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 10560 0x4E364A2: start_thread (pthread_create.c:456)
+    n1: 2800 0x636C95D: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 2800 0x642B871: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 2800 0x6838F26: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 2800 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 2800 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 2800 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 2800 0x4E364A2: start_thread (pthread_create.c:456)
+    n1: 2800 0x636CA6B: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 2800 0x642B871: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 2800 0x6838F26: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 2800 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 2800 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 2800 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 2800 0x4E364A2: start_thread (pthread_create.c:456)
+    n1: 2800 0x636CB73: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 2800 0x642B871: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 2800 0x6838F26: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 2800 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 2800 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 2800 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 2800 0x4E364A2: start_thread (pthread_create.c:456)
+    n1: 2800 0x636CC7F: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 2800 0x642B871: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 2800 0x6838F26: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 2800 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 2800 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 2800 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 2800 0x4E364A2: start_thread (pthread_create.c:456)
+    n0: 840 in 5 places, all below massif's threshold (1.00%)
+   n2: 9168 0x60D25A3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n0: 5072 in 34 places, all below massif's threshold (1.00%)
+    n1: 4096 0x6726878: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n0: 4096 in 64 places, all below massif's threshold (1.00%)
+   n1: 7560 0x669B4C0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n0: 7560 in 63 places, all below massif's threshold (1.00%)
+   n0: 1152 in 2 places, all below massif's threshold (1.00%)
+  n2: 33976 0x60D2437: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 32744 0x60D1CA7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 32744 0x63441FB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 32744 0x63447AF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 32744 0x662761A: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 32744 0x642B8CA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 32744 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 32744 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 32744 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 32744 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 32744 0x4E364A2: start_thread (pthread_create.c:456)
+   n0: 1232 in 2 places, all below massif's threshold (1.00%)
+  n0: 7608 in 52 places, all below massif's threshold (1.00%)
+  n1: 3404 0x60C4C17: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 3404 0x60C4CD3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n0: 3404 in 45 places, all below massif's threshold (1.00%)
+  n1: 3392 0x63FC47D: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n0: 3392 in 11 places, all below massif's threshold (1.00%)
+  n1: 3104 0x6723FF3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n0: 3104 in 6 places, all below massif's threshold (1.00%)
+  n1: 2984 0x682E814: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 2984 0x6838F3A: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 2984 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 2984 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+      n1: 2984 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+       n0: 2984 0x4E364A2: start_thread (pthread_create.c:456)
+ n1: 72704 0x6DF49BE: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+  n1: 72704 0x400F798: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400F8A9: _dl_init (dl-init.c:30)
+    n1: 72704 0x4013E56: dl_open_worker (dl-open.c:575)
+     n1: 72704 0x400F642: _dl_catch_error (dl-error.c:187)
+      n1: 72704 0x4013607: _dl_open (dl-open.c:660)
+       n1: 72704 0x5474EE7: dlopen_doit (dlopen.c:66)
+        n1: 72704 0x400F642: _dl_catch_error (dl-error.c:187)
+         n1: 72704 0x547552F: _dlerror_run (dlerror.c:163)
+          n1: 72704 0x5474F80: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+           n1: 72704 0x526D87F: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n1: 72704 0x526AC06: JLI_Launch (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+             n1: 72704 0x10871F: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java)
+              n0: 72704 0x56982DF: (below main) (libc-start.c:291)
+ n1: 14374 0x400B214: _dl_new_object (dl-object.c:75)
+  n1: 14374 0x400587B: _dl_map_object_from_fd (dl-load.c:1000)
+   n2: 14374 0x400874A: _dl_map_object (dl-load.c:2470)
+    n1: 8465 0x4013B12: dl_open_worker (dl-open.c:237)
+     n1: 8465 0x400F642: _dl_catch_error (dl-error.c:187)
+      n2: 8465 0x4013607: _dl_open (dl-open.c:660)
+       n1: 6094 0x5474EE7: dlopen_doit (dlopen.c:66)
+        n1: 6094 0x400F642: _dl_catch_error (dl-error.c:187)
+         n1: 6094 0x547552F: _dlerror_run (dlerror.c:163)
+          n2: 6094 0x5474F80: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+           n1: 3682 0x66DC9B0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n0: 3682 in 3 places, all below massif's threshold (1.00%)
+           n0: 2412 in 2 places, all below massif's threshold (1.00%)
+       n1: 2371 0x579731B: do_dlopen (dl-libc.c:87)
+        n1: 2371 0x400F642: _dl_catch_error (dl-error.c:187)
+         n1: 2371 0x57973AD: dlerror_run (dl-libc.c:46)
+          n1: 2371 0x5797420: __libc_dlopen_mode (dl-libc.c:163)
+           n1: 2371 0x578030C: nss_load_library (nsswitch.c:358)
+            n1: 2371 0x5780B56: __nss_lookup_function (nsswitch.c:466)
+             n0: 2371 in 2 places, all below massif's threshold (1.00%)
+    n1: 5909 0x400CFBE: openaux (dl-deps.c:63)
+     n1: 5909 0x400F642: _dl_catch_error (dl-error.c:187)
+      n1: 5909 0x400D22D: _dl_map_object_deps (dl-deps.c:254)
+       n1: 5909 0x4013B80: dl_open_worker (dl-open.c:280)
+        n1: 5909 0x400F642: _dl_catch_error (dl-error.c:187)
+         n2: 5909 0x4013607: _dl_open (dl-open.c:660)
+          n1: 3543 0x5474EE7: dlopen_doit (dlopen.c:66)
+           n1: 3543 0x400F642: _dl_catch_error (dl-error.c:187)
+            n1: 3543 0x547552F: _dlerror_run (dlerror.c:163)
+             n1: 3543 0x5474F80: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+              n1: 3543 0x526D87F: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+               n1: 3543 0x526AC06: JLI_Launch (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                n1: 3543 0x10871F: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java)
+                 n0: 3543 0x56982DF: (below main) (libc-start.c:291)
+          n1: 2366 0x579731B: do_dlopen (dl-libc.c:87)
+           n1: 2366 0x400F642: _dl_catch_error (dl-error.c:187)
+            n1: 2366 0x57973AD: dlerror_run (dl-libc.c:46)
+             n1: 2366 0x5797420: __libc_dlopen_mode (dl-libc.c:163)
+              n1: 2366 0x578030C: nss_load_library (nsswitch.c:358)
+               n1: 2366 0x5780B56: __nss_lookup_function (nsswitch.c:466)
+                n0: 2366 in 2 places, all below massif's threshold (1.00%)
+ n0: 6728 in 28 places, all below massif's threshold (1.00%)
+ n1: 4064 0x4009B6E: do_lookup_x (dl-lookup.c:268)
+  n1: 4064 0x4009FFF: _dl_lookup_symbol_x (dl-lookup.c:833)
+   n1: 4064 0x400BCBB: _dl_relocate_object (dl-machine.h:307)
+    n1: 4064 0x4013DDF: dl_open_worker (dl-open.c:435)
+     n1: 4064 0x400F642: _dl_catch_error (dl-error.c:187)
+      n1: 4064 0x4013607: _dl_open (dl-open.c:660)
+       n1: 4064 0x5474EE7: dlopen_doit (dlopen.c:66)
+        n1: 4064 0x400F642: _dl_catch_error (dl-error.c:187)
+         n1: 4064 0x547552F: _dlerror_run (dlerror.c:163)
+          n1: 4064 0x5474F80: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+           n1: 4064 0x526D87F: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n1: 4064 0x526AC06: JLI_Launch (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+             n1: 4064 0x10871F: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java)
+              n0: 4064 0x56982DF: (below main) (libc-start.c:291)
+ n1: 3984 0x4010FBC: _dl_check_map_versions (dl-version.c:293)
+  n1: 3984 0x4014075: dl_open_worker (dl-open.c:286)
+   n1: 3984 0x400F642: _dl_catch_error (dl-error.c:187)
+    n2: 3984 0x4013607: _dl_open (dl-open.c:660)
+     n1: 3192 0x5474EE7: dlopen_doit (dlopen.c:66)
+      n1: 3192 0x400F642: _dl_catch_error (dl-error.c:187)
+       n1: 3192 0x547552F: _dlerror_run (dlerror.c:163)
+        n1: 3192 0x5474F80: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+         n0: 3192 in 3 places, all below massif's threshold (1.00%)
+     n0: 792 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=18173600
+mem_heap_B=1243152
+mem_heap_extra_B=12528
+mem_stacks_B=23872
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=22126656
+mem_heap_B=1243200
+mem_heap_extra_B=12536
+mem_stacks_B=23816
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=28500848
+mem_heap_B=1243152
+mem_heap_extra_B=12528
+mem_stacks_B=24096
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=32618272
+mem_heap_B=1245248
+mem_heap_extra_B=12640
+mem_stacks_B=22544
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=37636304
+mem_heap_B=1765697
+mem_heap_extra_B=13495
+mem_stacks_B=24792
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=43785976
+mem_heap_B=1758596
+mem_heap_extra_B=13940
+mem_stacks_B=25200
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=47709336
+mem_heap_B=1801226
+mem_heap_extra_B=14254
+mem_stacks_B=24224
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=54016736
+mem_heap_B=1820568
+mem_heap_extra_B=14736
+mem_stacks_B=23880
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=58772984
+mem_heap_B=1838145
+mem_heap_extra_B=14903
+mem_stacks_B=24768
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=66145408
+mem_heap_B=1856707
+mem_heap_extra_B=15285
+mem_stacks_B=24408
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=74126592
+mem_heap_B=1861476
+mem_heap_extra_B=15572
+mem_stacks_B=22392
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=79158456
+mem_heap_B=1869379
+mem_heap_extra_B=16253
+mem_stacks_B=22456
+heap_tree=detailed
+n5: 1869379 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 1410477 0x66D30FB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+  n1: 480104 0x6854ACB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 480104 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 480104 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 480104 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 480104 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+       n1: 480104 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+        n0: 480104 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 368656 0x60D0CFD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 368656 0x67F6347: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 368656 0x6854A19: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 368656 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 368656 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 368656 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 368656 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 368656 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 368656 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 160088 0x68549A0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 160088 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 160088 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 160088 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 160088 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+       n1: 160088 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+        n0: 160088 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 122880 0x640053A: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 114688 0x64005EF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 90112 0x67F7EFB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n2: 90112 0x67F80DB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 81920 0x623D5F3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 81920 0x62421DD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 81920 0x6243656: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 81920 0x624A5C9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 81920 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n2: 81920 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 49152 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n0: 49152 in 3 places, all below massif's threshold (1.00%)
+            n0: 32768 in 2 places, all below massif's threshold (1.00%)
+      n0: 8192 in 1 place, below massif's threshold (1.00%)
+    n1: 24576 0x67F6F38: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 24576 0x67F7879: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n0: 24576 in 2 places, all below massif's threshold (1.00%)
+   n0: 8192 in 1 place, below massif's threshold (1.00%)
+  n0: 93221 in 76 places, all below massif's threshold (1.00%)
+  n2: 72648 0x60D2437: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 65488 0x60D1CA7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 32744 0x63441FB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 32744 0x63447AF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 32744 0x662761A: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 32744 0x642B8CA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 32744 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 32744 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 32744 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 32744 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 32744 0x4E364A2: start_thread (pthread_create.c:456)
+    n1: 32744 0x644123F: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 32744 0x6483097: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 32744 0x62444DA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 32744 0x624A5C9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 32744 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 32744 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 32744 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 32744 0x6807D01: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 32744 0x6851016: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n1: 32744 0x68524E9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+              n1: 32744 0x642B946: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+               n1: 32744 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                n1: 32744 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                 n1: 32744 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                  n1: 32744 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                   n0: 32744 0x4E364A2: start_thread (pthread_create.c:456)
+   n0: 7160 in 2 places, all below massif's threshold (1.00%)
+  n3: 63216 0x60D24E7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 28936 0x60D25A3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n0: 28936 in 48 places, all below massif's threshold (1.00%)
+   n1: 25568 0x6265573: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n0: 25568 in 12 places, all below massif's threshold (1.00%)
+   n0: 8712 in 3 places, all below massif's threshold (1.00%)
+  n2: 49664 0x63FFC3A: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 32768 0x63FFD4F: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 32768 0x6731BFC: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 32768 0x6806047: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 32768 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 32768 0x6807C90: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 32768 0x6851016: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 32768 0x68524E9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 32768 0x642B946: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 32768 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 32768 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n1: 32768 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+              n1: 32768 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+               n0: 32768 0x4E364A2: start_thread (pthread_create.c:456)
+   n0: 16896 in 2 places, all below massif's threshold (1.00%)
+ n1: 316000 0x848F5C0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+  n1: 316000 0x84907AF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+   n1: 316000 0x84909C3: ZIP_Open (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+    n1: 316000 0x6248210: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 316000 0x62486DF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 316000 0x624A467: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 316000 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 316000 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 316000 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 316000 0x6807C90: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 316000 0x6851016: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 316000 0x68524E9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n1: 316000 0x642B946: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+              n1: 316000 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+               n1: 316000 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                n1: 316000 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                 n1: 316000 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                  n0: 316000 0x4E364A2: start_thread (pthread_create.c:456)
+ n1: 72704 0x6DF49BE: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+  n1: 72704 0x400F798: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400F8A9: _dl_init (dl-init.c:30)
+    n1: 72704 0x4013E56: dl_open_worker (dl-open.c:575)
+     n1: 72704 0x400F642: _dl_catch_error (dl-error.c:187)
+      n1: 72704 0x4013607: _dl_open (dl-open.c:660)
+       n1: 72704 0x5474EE7: dlopen_doit (dlopen.c:66)
+        n1: 72704 0x400F642: _dl_catch_error (dl-error.c:187)
+         n1: 72704 0x547552F: _dlerror_run (dlerror.c:163)
+          n1: 72704 0x5474F80: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+           n1: 72704 0x526D87F: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n1: 72704 0x526AC06: JLI_Launch (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+             n1: 72704 0x10871F: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java)
+              n0: 72704 0x56982DF: (below main) (libc-start.c:291)
+ n1: 39500 0x848F5F3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+  n1: 39500 0x84907AF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+   n1: 39500 0x84909C3: ZIP_Open (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+    n1: 39500 0x6248210: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 39500 0x62486DF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 39500 0x624A467: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 39500 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 39500 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 39500 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 39500 0x6807C90: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 39500 0x6851016: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 39500 0x68524E9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n1: 39500 0x642B946: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+              n1: 39500 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+               n1: 39500 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                n1: 39500 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                 n1: 39500 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                  n0: 39500 0x4E364A2: start_thread (pthread_create.c:456)
+ n0: 30698 in 37 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=82946616
+mem_heap_B=5017819
+mem_heap_extra_B=16717
+mem_stacks_B=22176
+heap_tree=detailed
+n4: 5017819 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 4558917 0x66D30FB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+  n1: 3145728 0x611AFB5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 3145728 0x673D740: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 3145728 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 3145728 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 3145728 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 3145728 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 3145728 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 3145728 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 3145728 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 3145728 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 3145728 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 480104 0x6854ACB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 480104 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 480104 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 480104 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 480104 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+       n1: 480104 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+        n0: 480104 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 368656 0x60D0CFD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 368656 0x67F6347: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 368656 0x6854A19: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 368656 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 368656 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 368656 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 368656 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 368656 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 368656 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 160088 0x68549A0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 160088 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 160088 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 160088 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 160088 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+       n1: 160088 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+        n0: 160088 0x4E364A2: start_thread (pthread_create.c:456)
+  n0: 144589 in 82 places, all below massif's threshold (1.00%)
+  n2: 122880 0x640053A: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 114688 0x64005EF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 90112 0x67F7EFB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n2: 90112 0x67F80DB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 81920 0x623D5F3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 81920 0x62421DD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 81920 0x6243656: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 81920 0x624A5C9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 81920 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 81920 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n0: 81920 in 3 places, all below massif's threshold (1.00%)
+      n0: 8192 in 1 place, below massif's threshold (1.00%)
+    n0: 24576 in 1 place, below massif's threshold (1.00%)
+   n0: 8192 in 1 place, below massif's threshold (1.00%)
+  n2: 72648 0x60D2437: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 65488 0x60D1CA7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n0: 65488 in 2 places, all below massif's threshold (1.00%)
+   n0: 7160 in 2 places, all below massif's threshold (1.00%)
+  n1: 64224 0x60D24E7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n0: 64224 in 5 places, all below massif's threshold (1.00%)
+ n1: 316000 0x848F5C0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+  n1: 316000 0x84907AF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+   n1: 316000 0x84909C3: ZIP_Open (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+    n1: 316000 0x6248210: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 316000 0x62486DF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 316000 0x624A467: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 316000 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 316000 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 316000 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 316000 0x6807C90: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 316000 0x6851016: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 316000 0x68524E9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n1: 316000 0x642B946: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+              n1: 316000 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+               n1: 316000 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                n1: 316000 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                 n1: 316000 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                  n0: 316000 0x4E364A2: start_thread (pthread_create.c:456)
+ n1: 72704 0x6DF49BE: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.22)
+  n1: 72704 0x400F798: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x400F8A9: _dl_init (dl-init.c:30)
+    n1: 72704 0x4013E56: dl_open_worker (dl-open.c:575)
+     n1: 72704 0x400F642: _dl_catch_error (dl-error.c:187)
+      n1: 72704 0x4013607: _dl_open (dl-open.c:660)
+       n1: 72704 0x5474EE7: dlopen_doit (dlopen.c:66)
+        n1: 72704 0x400F642: _dl_catch_error (dl-error.c:187)
+         n1: 72704 0x547552F: _dlerror_run (dlerror.c:163)
+          n1: 72704 0x5474F80: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+           n1: 72704 0x526D87F: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n1: 72704 0x526AC06: JLI_Launch (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+             n1: 72704 0x10871F: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java)
+              n0: 72704 0x56982DF: (below main) (libc-start.c:291)
+ n0: 70198 in 38 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=87283280
+mem_heap_B=9344179
+mem_heap_extra_B=16877
+mem_stacks_B=22160
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=92013696
+mem_heap_B=14065915
+mem_heap_extra_B=16997
+mem_stacks_B=22176
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=99696648
+mem_heap_B=18275316
+mem_heap_extra_B=18692
+mem_stacks_B=28032
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=104991280
+mem_heap_B=18284600
+mem_heap_extra_B=18904
+mem_stacks_B=24784
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=108961968
+mem_heap_B=18285832
+mem_heap_extra_B=19288
+mem_stacks_B=34880
+heap_tree=detailed
+n3: 18285832 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n7: 17826653 0x66D30FB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+  n1: 5242880 0x611AFB5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x673D740: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 5242880 0x673D386: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 4194304 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 4194304 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 4194304 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 4194304 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 4194304 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 4194304 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 4194304 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 4194304 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 4194304 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 4194304 0x4E364A2: start_thread (pthread_create.c:456)
+   n1: 1048576 0x673DA6D: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 1048576 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 1048576 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 1048576 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 1048576 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 1048576 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 1048576 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 1048576 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 1048576 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 1048576 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 5242880 0x674CD35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x674EC43: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674DE35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 655360 0x673E1B4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 655360 0x673D3A4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 524288 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 524288 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 524288 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 524288 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 524288 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 524288 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 524288 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 524288 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n1: 524288 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+             n0: 524288 0x4E364A2: start_thread (pthread_create.c:456)
+    n0: 131072 in 1 place, below massif's threshold (1.00%)
+  n0: 593893 in 93 places, all below massif's threshold (1.00%)
+  n1: 480104 0x6854ACB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 480104 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 480104 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 480104 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 480104 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+       n1: 480104 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+        n0: 480104 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 368656 0x60D0CFD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 368656 0x67F6347: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 368656 0x6854A19: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 368656 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 368656 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 368656 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 368656 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 368656 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 368656 0x4E364A2: start_thread (pthread_create.c:456)
+ n1: 316000 0x848F5C0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+  n1: 316000 0x84907AF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+   n1: 316000 0x84909C3: ZIP_Open (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+    n1: 316000 0x6248210: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 316000 0x62486DF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 316000 0x624A467: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 316000 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 316000 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 316000 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 316000 0x6807C90: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 316000 0x6851016: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 316000 0x68524E9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n1: 316000 0x642B946: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+              n1: 316000 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+               n1: 316000 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                n1: 316000 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                 n1: 316000 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                  n0: 316000 0x4E364A2: start_thread (pthread_create.c:456)
+ n0: 143179 in 39 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=115579720
+mem_heap_B=18295657
+mem_heap_extra_B=19455
+mem_stacks_B=33920
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=122197592
+mem_heap_B=18305482
+mem_heap_extra_B=19710
+mem_stacks_B=35568
+heap_tree=detailed
+n3: 18305482 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n7: 17846277 0x66D30FB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+  n1: 5242880 0x611AFB5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x673D740: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 5242880 0x673D386: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 4194304 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 4194304 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 4194304 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 4194304 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 4194304 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 4194304 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 4194304 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 4194304 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 4194304 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 4194304 0x4E364A2: start_thread (pthread_create.c:456)
+   n1: 1048576 0x673DA6D: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 1048576 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 1048576 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 1048576 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 1048576 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 1048576 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 1048576 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 1048576 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 1048576 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 1048576 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 5242880 0x674CD35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x674EC43: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674DE35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 655360 0x673E1B4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 655360 0x673D3A4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 524288 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 524288 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 524288 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 524288 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 524288 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 524288 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 524288 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 524288 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n1: 524288 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+             n0: 524288 0x4E364A2: start_thread (pthread_create.c:456)
+    n0: 131072 in 1 place, below massif's threshold (1.00%)
+  n0: 613517 in 93 places, all below massif's threshold (1.00%)
+  n1: 480104 0x6854ACB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 480104 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 480104 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 480104 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 480104 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+       n1: 480104 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+        n0: 480104 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 368656 0x60D0CFD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 368656 0x67F6347: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 368656 0x6854A19: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 368656 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 368656 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 368656 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 368656 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 368656 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 368656 0x4E364A2: start_thread (pthread_create.c:456)
+ n1: 316000 0x848F5C0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+  n1: 316000 0x84907AF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+   n1: 316000 0x84909C3: ZIP_Open (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+    n1: 316000 0x6248210: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 316000 0x62486DF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 316000 0x624A467: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 316000 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 316000 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 316000 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 316000 0x6807C90: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 316000 0x6851016: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 316000 0x68524E9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n1: 316000 0x642B946: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+              n1: 316000 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+               n1: 316000 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                n1: 316000 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                 n1: 316000 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                  n0: 316000 0x4E364A2: start_thread (pthread_create.c:456)
+ n0: 143205 in 39 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=127492192
+mem_heap_B=18337463
+mem_heap_extra_B=20153
+mem_stacks_B=38624
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=132786504
+mem_heap_B=18338415
+mem_heap_extra_B=20345
+mem_stacks_B=37296
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=136757176
+mem_heap_B=18353480
+mem_heap_extra_B=21400
+mem_stacks_B=29320
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=142051536
+mem_heap_B=18371996
+mem_heap_extra_B=21668
+mem_stacks_B=31280
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=149713352
+mem_heap_B=18423010
+mem_heap_extra_B=22102
+mem_stacks_B=41008
+heap_tree=detailed
+n3: 18423010 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n7: 17957969 0x66D30FB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+  n1: 5242880 0x611AFB5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x673D740: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 5242880 0x673D386: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 4194304 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 4194304 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 4194304 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 4194304 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 4194304 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 4194304 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 4194304 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 4194304 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 4194304 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 4194304 0x4E364A2: start_thread (pthread_create.c:456)
+   n1: 1048576 0x673DA6D: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 1048576 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 1048576 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 1048576 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 1048576 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 1048576 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 1048576 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 1048576 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 1048576 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 1048576 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 5242880 0x674CD35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x674EC43: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674DE35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n0: 725209 in 96 places, all below massif's threshold (1.00%)
+  n1: 655360 0x673E1B4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 655360 0x673D3A4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 524288 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 524288 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 524288 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 524288 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 524288 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 524288 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 524288 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 524288 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n1: 524288 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+             n0: 524288 0x4E364A2: start_thread (pthread_create.c:456)
+    n0: 131072 in 1 place, below massif's threshold (1.00%)
+  n1: 480104 0x6854ACB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 480104 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 480104 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 480104 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 480104 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+       n1: 480104 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+        n0: 480104 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 368656 0x60D0CFD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 368656 0x67F6347: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 368656 0x6854A19: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 368656 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 368656 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 368656 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 368656 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 368656 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 368656 0x4E364A2: start_thread (pthread_create.c:456)
+ n1: 316000 0x848F5C0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+  n1: 316000 0x84907AF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+   n1: 316000 0x84909C3: ZIP_Open (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+    n1: 316000 0x6248210: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 316000 0x62486DF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 316000 0x624A467: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 316000 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 316000 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 316000 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 316000 0x6807C90: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 316000 0x6851016: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 316000 0x68524E9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n1: 316000 0x642B946: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+              n1: 316000 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+               n1: 316000 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                n1: 316000 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                 n1: 316000 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                  n0: 316000 0x4E364A2: start_thread (pthread_create.c:456)
+ n0: 149041 in 52 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=155007896
+mem_heap_B=18432517
+mem_heap_extra_B=22171
+mem_stacks_B=32424
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=160302376
+mem_heap_B=18437324
+mem_heap_extra_B=22372
+mem_stacks_B=34744
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=166949712
+mem_heap_B=18438695
+mem_heap_extra_B=22593
+mem_stacks_B=29272
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=170949688
+mem_heap_B=18439791
+mem_heap_extra_B=22729
+mem_stacks_B=28464
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=174950808
+mem_heap_B=18449182
+mem_heap_extra_B=22962
+mem_stacks_B=36808
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=178951344
+mem_heap_B=18450602
+mem_heap_extra_B=23086
+mem_stacks_B=33192
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=186952320
+mem_heap_B=18460297
+mem_heap_extra_B=23375
+mem_stacks_B=34824
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=194952224
+mem_heap_B=18462131
+mem_heap_extra_B=23893
+mem_stacks_B=38024
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=198952208
+mem_heap_B=18462687
+mem_heap_extra_B=23969
+mem_stacks_B=31552
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=204952216
+mem_heap_B=18472929
+mem_heap_extra_B=24183
+mem_stacks_B=31872
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=208952168
+mem_heap_B=18472929
+mem_heap_extra_B=24183
+mem_stacks_B=30832
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=212953416
+mem_heap_B=18473282
+mem_heap_extra_B=24222
+mem_stacks_B=28856
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=220953560
+mem_heap_B=18475007
+mem_heap_extra_B=24481
+mem_stacks_B=34568
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=226953520
+mem_heap_B=18475491
+mem_heap_extra_B=24661
+mem_stacks_B=36936
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=232953656
+mem_heap_B=18542668
+mem_heap_extra_B=25028
+mem_stacks_B=41448
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=236953640
+mem_heap_B=18527939
+mem_heap_extra_B=25253
+mem_stacks_B=40288
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=242954216
+mem_heap_B=18528873
+mem_heap_extra_B=25407
+mem_stacks_B=38368
+heap_tree=detailed
+n3: 18528873 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 18063826 0x66D30FB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+  n1: 5242880 0x674CD35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x674EC43: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674DE35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 5242880 0x673D386: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 4194304 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 4194304 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 4194304 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 4194304 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 4194304 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 4194304 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 4194304 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 4194304 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 4194304 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 4194304 0x4E364A2: start_thread (pthread_create.c:456)
+   n1: 1048576 0x673DA6D: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 1048576 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 1048576 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 1048576 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 1048576 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 1048576 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 1048576 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 1048576 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 1048576 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 1048576 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 5242880 0x611AFB5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x673D740: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 655360 0x673E1B4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 655360 0x673D3A4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 524288 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 524288 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 524288 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 524288 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 524288 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 524288 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 524288 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 524288 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n1: 524288 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+             n0: 524288 0x4E364A2: start_thread (pthread_create.c:456)
+    n0: 131072 in 1 place, below massif's threshold (1.00%)
+  n0: 601690 in 95 places, all below massif's threshold (1.00%)
+  n1: 480104 0x6854ACB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 480104 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 480104 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 480104 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 480104 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+       n1: 480104 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+        n0: 480104 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 368656 0x60D0CFD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 368656 0x67F6347: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 368656 0x6854A19: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 368656 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 368656 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 368656 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 368656 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 368656 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 368656 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 229376 0x640053A: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 212992 0x64005EF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n0: 212992 in 2 places, all below massif's threshold (1.00%)
+   n0: 16384 in 1 place, below massif's threshold (1.00%)
+ n1: 316000 0x848F5C0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+  n1: 316000 0x84907AF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+   n1: 316000 0x84909C3: ZIP_Open (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+    n1: 316000 0x6248210: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 316000 0x62486DF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 316000 0x624A467: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 316000 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 316000 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 316000 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 316000 0x6807C90: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 316000 0x6851016: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 316000 0x68524E9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n1: 316000 0x642B946: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+              n1: 316000 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+               n1: 316000 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                n1: 316000 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                 n1: 316000 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                  n0: 316000 0x4E364A2: start_thread (pthread_create.c:456)
+ n0: 149047 in 57 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=246954920
+mem_heap_B=18529115
+mem_heap_extra_B=25437
+mem_stacks_B=37536
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=250956920
+mem_heap_B=18537786
+mem_heap_extra_B=25518
+mem_stacks_B=36576
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=254956920
+mem_heap_B=18538404
+mem_heap_extra_B=25628
+mem_stacks_B=35000
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=262030608
+mem_heap_B=18624198
+mem_heap_extra_B=26610
+mem_stacks_B=31848
+heap_tree=detailed
+n3: 18624198 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n9: 18158569 0x66D30FB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+  n1: 5242880 0x674CD35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x674EC43: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674DE35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 5242880 0x673D386: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 4194304 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 4194304 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 4194304 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 4194304 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 4194304 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 4194304 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 4194304 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 4194304 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 4194304 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 4194304 0x4E364A2: start_thread (pthread_create.c:456)
+   n1: 1048576 0x673DA6D: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 1048576 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 1048576 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 1048576 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 1048576 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 1048576 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 1048576 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 1048576 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 1048576 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 1048576 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 5242880 0x611AFB5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x673D740: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 655360 0x673E1B4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 655360 0x673D3A4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 524288 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 524288 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 524288 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 524288 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 524288 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 524288 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 524288 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 524288 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n1: 524288 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+             n0: 524288 0x4E364A2: start_thread (pthread_create.c:456)
+    n0: 131072 in 1 place, below massif's threshold (1.00%)
+  n1: 480104 0x6854ACB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 480104 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 480104 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 480104 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 480104 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+       n1: 480104 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+        n0: 480104 0x4E364A2: start_thread (pthread_create.c:456)
+  n0: 477457 in 94 places, all below massif's threshold (1.00%)
+  n1: 368656 0x60D0CFD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 368656 0x67F6347: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 368656 0x6854A19: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 368656 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 368656 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 368656 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 368656 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 368656 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 368656 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 237568 0x640053A: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 221184 0x64005EF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 188416 0x67F7EFB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 188416 0x67F80DB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n0: 188416 in 2 places, all below massif's threshold (1.00%)
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+   n0: 16384 in 1 place, below massif's threshold (1.00%)
+  n2: 210784 0x60D2437: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 196464 0x60D1CA7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n0: 196464 in 6 places, all below massif's threshold (1.00%)
+   n0: 14320 in 2 places, all below massif's threshold (1.00%)
+ n1: 316000 0x848F5C0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+  n1: 316000 0x84907AF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+   n1: 316000 0x84909C3: ZIP_Open (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+    n1: 316000 0x6248210: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 316000 0x62486DF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 316000 0x624A467: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 316000 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 316000 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 316000 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 316000 0x6807C90: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 316000 0x6851016: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 316000 0x68524E9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n1: 316000 0x642B946: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+              n1: 316000 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+               n1: 316000 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                n1: 316000 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                 n1: 316000 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                  n0: 316000 0x4E364A2: start_thread (pthread_create.c:456)
+ n0: 149629 in 57 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=50
+#-----------
+time=262603608
+mem_heap_B=18803254
+mem_heap_extra_B=26810
+mem_stacks_B=43384
+heap_tree=detailed
+n3: 18803254 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n9: 18337625 0x66D30FB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+  n1: 5242880 0x674CD35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x674EC43: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674DE35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 5242880 0x673D386: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 4194304 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 4194304 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 4194304 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 4194304 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 4194304 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 4194304 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 4194304 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 4194304 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 4194304 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 4194304 0x4E364A2: start_thread (pthread_create.c:456)
+   n1: 1048576 0x673DA6D: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 1048576 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 1048576 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 1048576 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 1048576 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 1048576 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 1048576 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 1048576 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 1048576 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 1048576 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 5242880 0x611AFB5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x673D740: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 655360 0x673E1B4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 655360 0x673D3A4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 524288 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 524288 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 524288 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 524288 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 524288 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 524288 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 524288 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 524288 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n1: 524288 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+             n0: 524288 0x4E364A2: start_thread (pthread_create.c:456)
+    n0: 131072 in 1 place, below massif's threshold (1.00%)
+  n1: 480104 0x6854ACB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 480104 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 480104 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 480104 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 480104 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+       n1: 480104 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+        n0: 480104 0x4E364A2: start_thread (pthread_create.c:456)
+  n0: 477577 in 94 places, all below massif's threshold (1.00%)
+  n2: 389720 0x60D2437: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 360184 0x60D1CA7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n0: 360184 in 11 places, all below massif's threshold (1.00%)
+   n0: 29536 in 3 places, all below massif's threshold (1.00%)
+  n1: 368656 0x60D0CFD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 368656 0x67F6347: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 368656 0x6854A19: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 368656 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 368656 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 368656 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 368656 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 368656 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 368656 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 237568 0x640053A: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 221184 0x64005EF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n0: 221184 in 2 places, all below massif's threshold (1.00%)
+   n0: 16384 in 1 place, below massif's threshold (1.00%)
+ n1: 316000 0x848F5C0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+  n1: 316000 0x84907AF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+   n1: 316000 0x84909C3: ZIP_Open (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+    n1: 316000 0x6248210: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 316000 0x62486DF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 316000 0x624A467: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 316000 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 316000 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 316000 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 316000 0x6807C90: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 316000 0x6851016: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 316000 0x68524E9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n1: 316000 0x642B946: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+              n1: 316000 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+               n1: 316000 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                n1: 316000 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                 n1: 316000 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                  n0: 316000 0x4E364A2: start_thread (pthread_create.c:456)
+ n0: 149629 in 57 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=51
+#-----------
+time=265885888
+mem_heap_B=18836286
+mem_heap_extra_B=26890
+mem_stacks_B=42808
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=269168176
+mem_heap_B=18836574
+mem_heap_extra_B=26954
+mem_stacks_B=36584
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=272450776
+mem_heap_B=18869606
+mem_heap_extra_B=27034
+mem_stacks_B=43640
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=275733072
+mem_heap_B=18927298
+mem_heap_extra_B=28486
+mem_stacks_B=40696
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=279015352
+mem_heap_B=18905834
+mem_heap_extra_B=28614
+mem_stacks_B=35880
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=282297632
+mem_heap_B=18906831
+mem_heap_extra_B=28881
+mem_stacks_B=36048
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=285579912
+mem_heap_B=18907467
+mem_heap_extra_B=28965
+mem_stacks_B=33992
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=288862208
+mem_heap_B=18924155
+mem_heap_extra_B=30261
+mem_stacks_B=36304
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=292144488
+mem_heap_B=18924788
+mem_heap_extra_B=30388
+mem_stacks_B=46912
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=295426768
+mem_heap_B=18933967
+mem_heap_extra_B=30545
+mem_stacks_B=45712
+heap_tree=detailed
+n3: 18933967 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n9: 18467606 0x66D30FB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+  n1: 5242880 0x674CD35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x674EC43: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674DE35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 5242880 0x673D386: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 4194304 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 4194304 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 4194304 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 4194304 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 4194304 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 4194304 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 4194304 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 4194304 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 4194304 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 4194304 0x4E364A2: start_thread (pthread_create.c:456)
+   n1: 1048576 0x673DA6D: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 1048576 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 1048576 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 1048576 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 1048576 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 1048576 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 1048576 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 1048576 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 1048576 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 1048576 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 5242880 0x611AFB5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x673D740: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 655360 0x673E1B4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 655360 0x673D3A4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 524288 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 524288 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 524288 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 524288 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 524288 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 524288 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 524288 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 524288 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n1: 524288 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+             n0: 524288 0x4E364A2: start_thread (pthread_create.c:456)
+    n0: 131072 in 1 place, below massif's threshold (1.00%)
+  n0: 522758 in 95 places, all below massif's threshold (1.00%)
+  n1: 480104 0x6854ACB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 480104 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 480104 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 480104 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 480104 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+       n1: 480104 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+        n0: 480104 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 458136 0x60D2437: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 425672 0x60D1CA7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n0: 425672 in 12 places, all below massif's threshold (1.00%)
+   n0: 32464 in 3 places, all below massif's threshold (1.00%)
+  n1: 368656 0x60D0CFD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 368656 0x67F6347: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 368656 0x6854A19: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 368656 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 368656 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 368656 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 368656 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 368656 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 368656 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 253952 0x640053A: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 237568 0x64005EF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 204800 0x67F7EFB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 204800 0x67F80DB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n0: 204800 in 2 places, all below massif's threshold (1.00%)
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+   n0: 16384 in 1 place, below massif's threshold (1.00%)
+ n1: 316000 0x848F5C0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+  n1: 316000 0x84907AF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+   n1: 316000 0x84909C3: ZIP_Open (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+    n1: 316000 0x6248210: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 316000 0x62486DF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 316000 0x624A467: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 316000 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 316000 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 316000 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 316000 0x6807C90: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 316000 0x6851016: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 316000 0x68524E9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n1: 316000 0x642B946: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+              n1: 316000 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+               n1: 316000 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                n1: 316000 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                 n1: 316000 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                  n0: 316000 0x4E364A2: start_thread (pthread_create.c:456)
+ n0: 150361 in 57 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=61
+#-----------
+time=298710784
+mem_heap_B=18934443
+mem_heap_extra_B=30581
+mem_stacks_B=47744
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=301993064
+mem_heap_B=18935528
+mem_heap_extra_B=30752
+mem_stacks_B=48672
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=305275344
+mem_heap_B=18945351
+mem_heap_extra_B=30993
+mem_stacks_B=54872
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=308557624
+mem_heap_B=18947659
+mem_heap_extra_B=31197
+mem_stacks_B=46320
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=311839904
+mem_heap_B=18949640
+mem_heap_extra_B=31584
+mem_stacks_B=50344
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=315122184
+mem_heap_B=18950905
+mem_heap_extra_B=31775
+mem_stacks_B=45088
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=318404712
+mem_heap_B=18951361
+mem_heap_extra_B=31855
+mem_stacks_B=40968
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=321687592
+mem_heap_B=18959379
+mem_heap_extra_B=32037
+mem_stacks_B=45312
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=323478008
+mem_heap_B=19000667
+mem_heap_extra_B=32093
+mem_stacks_B=40640
+heap_tree=detailed
+n3: 19000667 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n9: 18493391 0x66D30FB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+  n1: 5242880 0x674CD35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x674EC43: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674DE35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 5242880 0x673D386: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 4194304 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 4194304 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 4194304 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 4194304 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 4194304 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 4194304 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 4194304 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 4194304 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 4194304 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 4194304 0x4E364A2: start_thread (pthread_create.c:456)
+   n1: 1048576 0x673DA6D: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 1048576 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 1048576 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 1048576 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 1048576 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 1048576 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 1048576 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 1048576 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 1048576 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 1048576 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 5242880 0x611AFB5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x673D740: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 655360 0x673E1B4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 655360 0x673D3A4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 524288 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 524288 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 524288 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 524288 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 524288 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 524288 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 524288 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 524288 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n1: 524288 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+             n0: 524288 0x4E364A2: start_thread (pthread_create.c:456)
+    n0: 131072 in 1 place, below massif's threshold (1.00%)
+  n0: 532159 in 95 places, all below massif's threshold (1.00%)
+  n1: 480104 0x6854ACB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 480104 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 480104 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 480104 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 480104 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+       n1: 480104 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+        n0: 480104 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 458136 0x60D2437: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 425672 0x60D1CA7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n0: 425672 in 12 places, all below massif's threshold (1.00%)
+   n0: 32464 in 3 places, all below massif's threshold (1.00%)
+  n1: 368656 0x60D0CFD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 368656 0x67F6347: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 368656 0x6854A19: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 368656 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 368656 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 368656 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 368656 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 368656 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 368656 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 270336 0x640053A: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 253952 0x64005EF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 221184 0x67F7EFB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n2: 221184 0x67F80DB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 204800 0x623D5F3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 204800 0x62421DD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 204800 0x6243656: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 204800 0x624A5C9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 204800 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 204800 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n0: 204800 in 5 places, all below massif's threshold (1.00%)
+      n0: 16384 in 1 place, below massif's threshold (1.00%)
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+   n0: 16384 in 1 place, below massif's threshold (1.00%)
+ n1: 316464 0x848F5C0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+  n2: 316464 0x84907AF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+   n1: 316000 0x84909C3: ZIP_Open (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+    n1: 316000 0x6248210: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 316000 0x62486DF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 316000 0x624A467: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 316000 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 316000 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 316000 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 316000 0x6807C90: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 316000 0x6851016: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 316000 0x68524E9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n1: 316000 0x642B946: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+              n1: 316000 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+               n1: 316000 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                n1: 316000 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                 n1: 316000 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                  n0: 316000 0x4E364A2: start_thread (pthread_create.c:456)
+   n0: 464 in 1 place, below massif's threshold (1.00%)
+ n0: 190812 in 60 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=70
+#-----------
+time=326760288
+mem_heap_B=19092767
+mem_heap_extra_B=32545
+mem_stacks_B=47872
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=328172272
+mem_heap_B=19199346
+mem_heap_extra_B=33030
+mem_stacks_B=40392
+heap_tree=detailed
+n3: 19199346 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n9: 18494367 0x66D30FB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+  n1: 5242880 0x674CD35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x674EC43: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674DE35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 5242880 0x673D386: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 4194304 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 4194304 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 4194304 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 4194304 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 4194304 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 4194304 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 4194304 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 4194304 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 4194304 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 4194304 0x4E364A2: start_thread (pthread_create.c:456)
+   n1: 1048576 0x673DA6D: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 1048576 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 1048576 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 1048576 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 1048576 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 1048576 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 1048576 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 1048576 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 1048576 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 1048576 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 5242880 0x611AFB5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x673D740: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 655360 0x673E1B4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 655360 0x673D3A4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 524288 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 524288 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 524288 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 524288 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 524288 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 524288 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 524288 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 524288 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n1: 524288 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+             n0: 524288 0x4E364A2: start_thread (pthread_create.c:456)
+    n0: 131072 in 1 place, below massif's threshold (1.00%)
+  n0: 533135 in 95 places, all below massif's threshold (1.00%)
+  n1: 480104 0x6854ACB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 480104 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 480104 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 480104 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 480104 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+       n1: 480104 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+        n0: 480104 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 458136 0x60D2437: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 425672 0x60D1CA7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n0: 425672 in 12 places, all below massif's threshold (1.00%)
+   n0: 32464 in 3 places, all below massif's threshold (1.00%)
+  n1: 368656 0x60D0CFD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 368656 0x67F6347: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 368656 0x6854A19: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 368656 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 368656 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 368656 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 368656 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 368656 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 368656 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 270336 0x640053A: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 253952 0x64005EF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 221184 0x67F7EFB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n2: 221184 0x67F80DB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 204800 0x623D5F3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 204800 0x62421DD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 204800 0x6243656: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 204800 0x624A5C9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 204800 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 204800 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n0: 204800 in 5 places, all below massif's threshold (1.00%)
+      n0: 16384 in 1 place, below massif's threshold (1.00%)
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+   n0: 16384 in 1 place, below massif's threshold (1.00%)
+ n0: 357139 in 61 places, all below massif's threshold (1.00%)
+ n1: 347840 0x848F5C0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+  n2: 347840 0x84907AF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+   n1: 316000 0x84909C3: ZIP_Open (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+    n1: 316000 0x6248210: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 316000 0x62486DF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 316000 0x624A467: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 316000 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 316000 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 316000 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 316000 0x6807C90: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 316000 0x6851016: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 316000 0x68524E9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n1: 316000 0x642B946: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+              n1: 316000 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+               n1: 316000 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                n1: 316000 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                 n1: 316000 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                  n0: 316000 0x4E364A2: start_thread (pthread_create.c:456)
+   n0: 31840 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=72
+#-----------
+time=331454552
+mem_heap_B=19300931
+mem_heap_extra_B=33557
+mem_stacks_B=44160
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=334736832
+mem_heap_B=19302003
+mem_heap_extra_B=33629
+mem_stacks_B=48880
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=338019128
+mem_heap_B=19303535
+mem_heap_extra_B=33769
+mem_stacks_B=40384
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=341301464
+mem_heap_B=19305533
+mem_heap_extra_B=33979
+mem_stacks_B=49424
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=344583768
+mem_heap_B=19313845
+mem_heap_extra_B=33955
+mem_stacks_B=39872
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=347866120
+mem_heap_B=19316369
+mem_heap_extra_B=34247
+mem_stacks_B=44592
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=351153712
+mem_heap_B=19332365
+mem_heap_extra_B=34355
+mem_stacks_B=50832
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=354435992
+mem_heap_B=19349949
+mem_heap_extra_B=34795
+mem_stacks_B=39712
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=355586960
+mem_heap_B=19415437
+mem_heap_extra_B=34827
+mem_stacks_B=39144
+heap_tree=detailed
+n4: 19415437 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n9: 18608408 0x66D30FB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+  n1: 5242880 0x674CD35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x674EC43: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674DE35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 5242880 0x673D386: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 4194304 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 4194304 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 4194304 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 4194304 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 4194304 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 4194304 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 4194304 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 4194304 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 4194304 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 4194304 0x4E364A2: start_thread (pthread_create.c:456)
+   n1: 1048576 0x673DA6D: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 1048576 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 1048576 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 1048576 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 1048576 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 1048576 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 1048576 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 1048576 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 1048576 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 1048576 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 5242880 0x611AFB5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x673D740: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 655360 0x673E1B4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 655360 0x673D3A4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 524288 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 524288 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 524288 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 524288 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 524288 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 524288 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 524288 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 524288 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n1: 524288 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+             n0: 524288 0x4E364A2: start_thread (pthread_create.c:456)
+    n0: 131072 in 1 place, below massif's threshold (1.00%)
+  n0: 565072 in 96 places, all below massif's threshold (1.00%)
+  n2: 523856 0x60D2437: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 491160 0x60D1CA7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n0: 491160 in 14 places, all below massif's threshold (1.00%)
+   n0: 32696 in 3 places, all below massif's threshold (1.00%)
+  n1: 480104 0x6854ACB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 480104 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 480104 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 480104 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 480104 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+       n1: 480104 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+        n0: 480104 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 368656 0x60D0CFD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 368656 0x67F6347: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 368656 0x6854A19: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 368656 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 368656 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 368656 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 368656 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 368656 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 368656 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 286720 0x640053A: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 262144 0x64005EF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 229376 0x67F7EFB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n2: 229376 0x67F80DB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 212992 0x623D5F3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 212992 0x62421DD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n2: 212992 0x6243656: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 204800 0x624A5C9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 204800 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 204800 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n0: 204800 in 5 places, all below massif's threshold (1.00%)
+         n0: 8192 in 1 place, below massif's threshold (1.00%)
+      n0: 16384 in 1 place, below massif's threshold (1.00%)
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+   n0: 24576 in 1 place, below massif's threshold (1.00%)
+ n1: 365712 0x848F5C0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+  n2: 365712 0x84907AF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+   n1: 316000 0x84909C3: ZIP_Open (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+    n1: 316000 0x6248210: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 316000 0x62486DF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 316000 0x624A467: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 316000 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 316000 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 316000 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 316000 0x6807C90: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 316000 0x6851016: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 316000 0x68524E9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n1: 316000 0x642B946: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+              n1: 316000 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+               n1: 316000 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                n1: 316000 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                 n1: 316000 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                  n0: 316000 0x4E364A2: start_thread (pthread_create.c:456)
+   n0: 49712 in 1 place, below massif's threshold (1.00%)
+ n1: 229376 0x505770A: inflate (in /lib/x86_64-linux-gnu/libz.so.1.2.8)
+  n1: 229376 0x848E5B6: Java_java_util_zip_Inflater_inflateBytes (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+   n1: 229376 0x86AC405: ???
+    n1: 229376 0x869BA3E: ???
+     n1: 229376 0x869BA3E: ???
+      n1: 229376 0x869BA3E: ???
+       n1: 229376 0x869BD7E: ???
+        n1: 229376 0x869BD7E: ???
+         n1: 229376 0x869BFFB: ???
+          n1: 229376 0x869B7CE: ???
+           n1: 229376 0x869B813: ???
+            n1: 229376 0x869BD7E: ???
+             n1: 229376 0x869BD7E: ???
+              n1: 229376 0x869BD7E: ???
+               n1: 229376 0x869BD7E: ???
+                n1: 229376 0x869BD7E: ???
+                 n1: 229376 0x86944E5: ???
+                  n1: 229376 0x647FF21: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                   n1: 229376 0x64CCF58: JVM_DoPrivileged (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                    n1: 229376 0x86AC405: ???
+                     n1: 229376 0x869BD7E: ???
+                      n1: 229376 0x869BD7E: ???
+                       n1: 229376 0x869BD7E: ???
+                        n1: 229376 0x869BD7E: ???
+                         n1: 229376 0x869BD7E: ???
+                          n1: 229376 0x869BD7E: ???
+                           n1: 229376 0x86944E5: ???
+                            n1: 229376 0x647FF21: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                             n1: 229376 0x64A0755: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                              n0: 229376 0x64A1B8A: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+ n0: 211941 in 61 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=81
+#-----------
+time=358677656
+mem_heap_B=19604764
+mem_heap_extra_B=35284
+mem_stacks_B=44488
+heap_tree=peak
+n4: 19604764 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n9: 18797408 0x66D30FB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+  n1: 5242880 0x611AFB5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x673D740: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 5242880 0x674CD35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 5242880 0x674EC43: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 5242880 0x674DE35: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 5242880 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 5242880 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 5242880 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 5242880 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 5242880 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n1: 5242880 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n0: 5242880 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 5242880 0x673D386: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 4194304 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 4194304 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 4194304 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 4194304 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 4194304 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 4194304 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 4194304 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 4194304 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 4194304 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 4194304 0x4E364A2: start_thread (pthread_create.c:456)
+   n1: 1048576 0x673DA6D: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 1048576 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 1048576 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 1048576 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 1048576 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 1048576 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 1048576 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 1048576 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+           n1: 1048576 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n0: 1048576 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 688808 0x60D2437: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 654880 0x60D1CA7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n0: 654880 in 19 places, all below massif's threshold (1.00%)
+   n0: 33928 in 3 places, all below massif's threshold (1.00%)
+  n1: 655360 0x673E1B4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 655360 0x673D3A4: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 524288 0x673D9D5: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 524288 0x674C590: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 524288 0x67018D3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 524288 0x6852E50: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 524288 0x642B978: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 524288 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 524288 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 524288 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+            n1: 524288 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+             n0: 524288 0x4E364A2: start_thread (pthread_create.c:456)
+    n0: 131072 in 1 place, below massif's threshold (1.00%)
+  n0: 589120 in 96 places, all below massif's threshold (1.00%)
+  n1: 480104 0x6854ACB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 480104 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 480104 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 480104 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 480104 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+       n1: 480104 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+        n0: 480104 0x4E364A2: start_thread (pthread_create.c:456)
+  n1: 368656 0x60D0CFD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n1: 368656 0x67F6347: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 368656 0x6854A19: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 368656 0x642B8ED: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 368656 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 368656 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 368656 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+         n1: 368656 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+          n0: 368656 0x4E364A2: start_thread (pthread_create.c:456)
+  n2: 286720 0x640053A: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+   n2: 262144 0x64005EF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+    n1: 229376 0x67F7EFB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n2: 229376 0x67F80DB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 212992 0x623D5F3: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 212992 0x62421DD: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n2: 212992 0x6243656: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 204800 0x624A5C9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 204800 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 204800 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n0: 204800 in 5 places, all below massif's threshold (1.00%)
+         n0: 8192 in 1 place, below massif's threshold (1.00%)
+      n0: 16384 in 1 place, below massif's threshold (1.00%)
+    n0: 32768 in 1 place, below massif's threshold (1.00%)
+   n0: 24576 in 1 place, below massif's threshold (1.00%)
+ n1: 365712 0x848F5C0: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+  n2: 365712 0x84907AF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+   n1: 316000 0x84909C3: ZIP_Open (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+    n1: 316000 0x6248210: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+     n1: 316000 0x62486DF: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+      n1: 316000 0x624A467: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+       n1: 316000 0x6807893: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+        n1: 316000 0x68063A9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+         n1: 316000 0x6807BB7: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+          n1: 316000 0x6807C90: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+           n1: 316000 0x6851016: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+            n1: 316000 0x68524E9: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+             n1: 316000 0x642B946: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+              n1: 316000 0x6838FBA: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+               n1: 316000 0x64A566F: JNI_CreateJavaVM (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                n1: 316000 0x5268E85: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                 n1: 316000 0x526D3AB: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so)
+                  n0: 316000 0x4E364A2: start_thread (pthread_create.c:456)
+   n0: 49712 in 1 place, below massif's threshold (1.00%)
+ n1: 229376 0x505770A: inflate (in /lib/x86_64-linux-gnu/libz.so.1.2.8)
+  n1: 229376 0x848E5B6: Java_java_util_zip_Inflater_inflateBytes (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so)
+   n1: 229376 0x86AC405: ???
+    n1: 229376 0x869BA3E: ???
+     n1: 229376 0x869BA3E: ???
+      n1: 229376 0x869BA3E: ???
+       n1: 229376 0x869BD7E: ???
+        n1: 229376 0x869BD7E: ???
+         n1: 229376 0x869BFFB: ???
+          n1: 229376 0x869B7CE: ???
+           n1: 229376 0x869B813: ???
+            n1: 229376 0x869BD7E: ???
+             n1: 229376 0x869BD7E: ???
+              n1: 229376 0x869BD7E: ???
+               n1: 229376 0x869BD7E: ???
+                n1: 229376 0x869BD7E: ???
+                 n1: 229376 0x86944E5: ???
+                  n1: 229376 0x647FF21: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                   n1: 229376 0x64CCF58: JVM_DoPrivileged (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                    n1: 229376 0x86AC405: ???
+                     n1: 229376 0x869BD7E: ???
+                      n1: 229376 0x869BD7E: ???
+                       n1: 229376 0x869BD7E: ???
+                        n1: 229376 0x869BD7E: ???
+                         n1: 229376 0x869BD7E: ???
+                          n1: 229376 0x869BD7E: ???
+                           n1: 229376 0x86944E5: ???
+                            n1: 229376 0x647FF21: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                             n1: 229376 0x64A0755: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+                              n0: 229376 0x64A1B8A: ??? (in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so)
+ n0: 212268 in 61 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=82
+#-----------
+time=361960424
+mem_heap_B=19606921
+mem_heap_extra_B=35383
+mem_stacks_B=43512
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=365242704
+mem_heap_B=19616413
+mem_heap_extra_B=35851
+mem_stacks_B=50808
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=368524984
+mem_heap_B=19657575
+mem_heap_extra_B=37345
+mem_stacks_B=50768
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=371807264
+mem_heap_B=19676039
+mem_heap_extra_B=37977
+mem_stacks_B=57008
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=375089544
+mem_heap_B=19721543
+mem_heap_extra_B=38049
+mem_stacks_B=55616
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=378371824
+mem_heap_B=19696823
+mem_heap_extra_B=37209
+mem_stacks_B=44256
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=381654104
+mem_heap_B=19684767
+mem_heap_extra_B=36849
+mem_stacks_B=37736
+heap_tree=empty
