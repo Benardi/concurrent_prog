@@ -3,11 +3,6 @@ title: "Concurrent Programming - List 2"
 author: José Benardi de Souza Nunes, Gustavo Diniz Monteiro, Ruan Roberto Eloy Silveira
 output: 
     html_document:
-      
-      df_print: paged
-      toc: yes
-      toc_float: yes
-    html_notebook:
       df_print: paged
       toc: yes
       toc_float: yes
@@ -98,6 +93,32 @@ theme_set(theme_bw())
 <br>
 
 # Question 3
+
+<br>
+
+## Implementation
+
+<br>
+
+### Java-Thread implementation
+
+<br>
+
+* Code can be found at `code/CreateNThreads.java`
+
+```{c, eval=FALSE, code = readLines(here::here("code/CreateNThreads.java"))}
+
+```
+
+### Goroutine implementation
+
+<br>
+
+* Code can be found at `go-code/goroutines.go`
+
+```{c, eval=FALSE, code = readLines(here::here("go-code/goroutines.go"))}
+
+```
 
 <br>
 
