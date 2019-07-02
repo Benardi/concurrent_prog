@@ -13,8 +13,7 @@ public class Receiver implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < msgQuantity; i++) {
-            String message = messenger.takeMessage();
-            System.out.println("Take: " + message);
+            messenger.takeMessage();
         }
     }
 }

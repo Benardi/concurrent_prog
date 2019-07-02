@@ -78,3 +78,4 @@ local.properties
 
 ## Annotation Processing
 .apt_generated/
+.Rproj.user
