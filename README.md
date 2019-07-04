@@ -21,16 +21,16 @@ Course Project Concurrent Programming 2019.1 (Computer Science program - UFCG)
 
 To run the first experiment first compile the following C scripts with the compiler you have available:
 
-* `c-code/protected_ex1.c` 
-* `c-code/unprotected_ex1.c`
+* `code/list1/c-code/ex1/protected_ex1.c` 
+* `code/list1/c-code/ex1/unprotected_ex1.c`
 
-Now, simply run the Bash script `code/perf_exp.sh`:
+Now, simply run the Bash script `code/utils/perf_exp.sh`:
 
 ```
  bash ./code/perf_exp.sh
 ```
 
-* The resulting C.S.V file can be found at `output/perf_result.csv`
+* The resulting C.S.V file can be found at `output/list1/ex1/perf_result.csv`
 
 <br>
 
@@ -39,21 +39,21 @@ Now, simply run the Bash script `code/perf_exp.sh`:
 Run the following Bash script to generate the mem profiling logs:
 
 ```
- bash ./code/generate_mem_logs.sh
+ bash ./code/utils/generate_mem_logs.sh
 ```
 
-The generated logs can be found at `output/goroutine_javathread/`
+The generated logs can be found at `output/list2/ex3/goroutine_javathread/`
 
 Now, run the following Bash script to process the logs into a C.S.V file:
 
 ```
- bash ./code/format_all_logs.sh
+ bash ./code/utils/format_all_logs.sh
 ```
 
-* The Bash script invokes the Python script `code/format_mem_profiling.py`. For further information about it, run:
+* The Bash script invokes the Python script `code/utils/format_mem_profiling.py`. For further information about it, run:
 
 ```
- python ./code/format_mem_profiling.py -h
+ python ./code/utils/format_mem_profiling.py -h
 ```
 
 <br>
@@ -63,11 +63,11 @@ Now, run the following Bash script to process the logs into a C.S.V file:
 Run the following Bash script to produce the results:
 
 ```
- bash ./code/collection_perf.sh
+ bash ./code/utils/collection_perf.sh
 ```
 
-* The resulting C.S.V file can be found at `output/report.csv`
-* The Bash script invokes the Java script `java-code/src/list-1/ex_05/Main.java`.
+* The resulting C.S.V file can be found at `output/list1/ex5/report.csv`
+* The Bash script invokes the Java script `code/list1/java-code/ex5/Main.java`.
 
 <br>
 
