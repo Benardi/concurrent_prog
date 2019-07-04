@@ -246,7 +246,7 @@ theme_set(theme_bw())</code></pre>
 <h2>Returns first result</h2>
 <p><br></p>
 <ul>
-<li>Code can be found at <code>go-code/first_return.go</code></li>
+<li>Code can be found at <code>code/list2/go-code/ex1/first_return.go</code></li>
 </ul>
 <pre class="c"><code>package main
 
@@ -296,7 +296,7 @@ func main() {
 <h2>Returns combined result</h2>
 <p><br></p>
 <ul>
-<li>Code can be found at <code>go-code/combined_return.go</code></li>
+<li>Code can be found at <code>code/list2/go-code/ex1/combined_return.go</code></li>
 </ul>
 <pre class="c"><code>package main
 
@@ -357,7 +357,7 @@ func main() {
 <h2>Returns first result</h2>
 <p><br></p>
 <ul>
-<li>Code can be found at <code>go-code/return_first-2a.go</code></li>
+<li>Code can be found at <code>code/list2/go-code/ex2/return_first-2a.go</code></li>
 </ul>
 <pre class="c"><code>package main
 
@@ -438,7 +438,7 @@ func main() {
 <h2>Returns combined result</h2>
 <p><br></p>
 <ul>
-<li>Code can be found at <code>go-code/return_first-2b.go</code></li>
+<li>Code can be found at <code>code/list2/go-code/ex2/return_first-2b.go</code></li>
 </ul>
 <pre class="c"><code>package main
 
@@ -525,7 +525,7 @@ func main() {
 <h3>Java-Thread implementation</h3>
 <p><br></p>
 <ul>
-<li>Code can be found at <code>code/CreateNThreads.java</code></li>
+<li>Code can be found at <code>code/list2/java-code/ex3/CreateNThreads.java</code></li>
 </ul>
 <pre class="c"><code>
 public class CreateNThreads {
@@ -562,7 +562,7 @@ public class CreateNThreads {
 <h3>Goroutine implementation</h3>
 <p><br></p>
 <ul>
-<li>Code can be found at <code>go-code/goroutines.go</code></li>
+<li>Code can be found at <code>code/list2/go-code/ex3/goroutines.go</code></li>
 </ul>
 <pre class="c"><code>package main
 import (
@@ -611,7 +611,7 @@ func main() {
 <p><br></p>
 <div id="load-data" class="section level3">
 <h3>Load Data</h3>
-<pre class="r"><code>read_csv(here::here(&quot;output/q3-l2-results.csv&quot;),
+<pre class="r"><code>read_csv(here::here(&quot;output/list2/ex3/q3-l2-results.csv&quot;),
          col_types = cols(
            impl = col_character(),
            nflows = col_integer(),
@@ -732,7 +732,7 @@ melt_data %&gt;%
   sample_n(10)</code></pre>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["impl"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["snapshot"],"name":[2],"type":["int"],"align":["right"]},{"label":["nflows"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["time"],"name":[4],"type":["int"],"align":["right"]},{"label":["variable"],"name":[5],"type":["fctr"],"align":["left"]},{"label":["value"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"Java-Thread","2":"25","3":"200","4":"162302408","5":"mem_heap_extra_B","6":"22427","_rn_":"1889"},{"1":"Goroutine","2":"54","3":"50","4":"599211184","5":"mem_heap_B","6":"3927","_rn_":"889"},{"1":"Java-Thread","2":"18","3":"100","4":"96209440","5":"mem_heap_extra_B","6":"17021","_rn_":"1726"},{"1":"Java-Thread","2":"57","3":"50","4":"363524576","5":"mem_heap_extra_B","6":"44115","_rn_":"1642"},{"1":"Java-Thread","2":"15","3":"400","4":"122378384","5":"mem_heap_B","6":"18305418","_rn_":"1344"},{"1":"Goroutine","2":"13","3":"400","4":"149883184","5":"total_mem","6":"189728","_rn_":"563"},{"1":"Goroutine","2":"47","3":"100","4":"568928784","5":"mem_heap_B","6":"3639","_rn_":"996"},{"1":"Java-Thread","2":"26","3":"400","4":"217862216","5":"total_mem","6":"18538904","_rn_":"661"},{"1":"Java-Thread","2":"55","3":"400","4":"443625784","5":"mem_heap_B","6":"22936866","_rn_":"1384"},{"1":"Java-Thread","2":"87","3":"100","4":"364075592","5":"mem_heap_extra_B","6":"56224","_rn_":"1795"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["impl"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["snapshot"],"name":[2],"type":["int"],"align":["right"]},{"label":["nflows"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["time"],"name":[4],"type":["int"],"align":["right"]},{"label":["variable"],"name":[5],"type":["fctr"],"align":["left"]},{"label":["value"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"Java-Thread","2":"55","3":"50","4":"358102288","5":"mem_heap_B","6":"19542093","_rn_":"946"},{"1":"Goroutine","2":"8","3":"400","4":"92884176","5":"total_mem","6":"104544","_rn_":"558"},{"1":"Java-Thread","2":"5","3":"400","4":"37888336","5":"mem_heap_extra_B","6":"13487","_rn_":"2028"},{"1":"Java-Thread","2":"57","3":"400","4":"454789512","5":"mem_heap_extra_B","6":"113761","_rn_":"2080"},{"1":"Java-Thread","2":"11","3":"200","4":"69050664","5":"mem_heap_B","6":"1857444","_rn_":"1181"},{"1":"Java-Thread","2":"66","3":"25","4":"348008840","5":"mem_heap_extra_B","6":"34043","_rn_":"1524"},{"1":"Java-Thread","2":"27","3":"200","4":"174891784","5":"mem_heap_extra_B","6":"22909","_rn_":"1891"},{"1":"Java-Thread","2":"32","3":"100","4":"162156096","5":"mem_heap_extra_B","6":"22443","_rn_":"1740"},{"1":"Java-Thread","2":"40","3":"400","4":"340423928","5":"mem_stacks_B","6":"39800","_rn_":"2757"},{"1":"Java-Thread","2":"47","3":"25","4":"277459912","5":"mem_heap_B","6":"18895250","_rn_":"811"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p><br></p>

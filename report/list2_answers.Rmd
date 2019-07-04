@@ -35,9 +35,9 @@ theme_set(theme_bw())
 
 <br>
 
-* Code can be found at `go-code/first_return.go`
+* Code can be found at `code/list2/go-code/ex1/first_return.go`
 
-```{c, eval=FALSE, code = readLines(here::here("go-code/first_return.go"))}
+```{c, eval=FALSE, code = readLines(here::here("code/list2/go-code/ex1/first_return.go"))}
 
 ```
 
@@ -47,9 +47,9 @@ theme_set(theme_bw())
 
 <br>
 
-* Code can be found at `go-code/combined_return.go`
+* Code can be found at `code/list2/go-code/ex1/combined_return.go`
 
-```{c, eval=FALSE, code = readLines(here::here("go-code/combined_return.go"))}
+```{c, eval=FALSE, code = readLines(here::here("code/list2/go-code/ex1/combined_return.go"))}
 
 ```
 
@@ -67,10 +67,10 @@ theme_set(theme_bw())
 
 <br>
 
-* Code can be found at `go-code/return_first-2a.go`
+* Code can be found at `code/list2/go-code/ex2/return_first-2a.go`
 
 
-```{c, eval=FALSE, code = readLines(here::here("go-code/return_first-2a.go"))}
+```{c, eval=FALSE, code = readLines(here::here("code/list2/go-code/ex2/return_first-2a.go"))}
 
 ```
 
@@ -80,9 +80,9 @@ theme_set(theme_bw())
 
 <br>
 
-* Code can be found at `go-code/return_first-2b.go`
+* Code can be found at `code/list2/go-code/ex2/return_first-2b.go`
 
-```{c, eval=FALSE, code = readLines(here::here("go-code/combined_return-2b.go"))}
+```{c, eval=FALSE, code = readLines(here::here("code/list2/go-code/ex2/combined_return-2b.go"))}
 
 ```
 
@@ -104,9 +104,9 @@ theme_set(theme_bw())
 
 <br>
 
-* Code can be found at `code/CreateNThreads.java`
+* Code can be found at `code/list2/java-code/ex3/CreateNThreads.java`
 
-```{c, eval=FALSE, code = readLines(here::here("code/CreateNThreads.java"))}
+```{c, eval=FALSE, code = readLines(here::here("code/list2/java-code/ex3/CreateNThreads.java"))}
 
 ```
 
@@ -114,9 +114,9 @@ theme_set(theme_bw())
 
 <br>
 
-* Code can be found at `go-code/goroutines.go`
+* Code can be found at `code/list2/go-code/ex3/goroutines.go`
 
-```{c, eval=FALSE, code = readLines(here::here("go-code/goroutines.go"))}
+```{c, eval=FALSE, code = readLines(here::here("code/list2/go-code/ex3/goroutines.go"))}
 
 ```
 
@@ -137,7 +137,7 @@ theme_set(theme_bw())
 ### Load Data
 
 ```{r}
-read_csv(here::here("output/q3-l2-results.csv"),
+read_csv(here::here("output/list2/ex3/q3-l2-results.csv"),
          col_types = cols(
            impl = col_character(),
            nflows = col_integer(),
