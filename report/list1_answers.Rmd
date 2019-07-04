@@ -45,10 +45,10 @@ In this problem let us compare two versions of a program that's supposed to  cou
 
 ### Unprotected version
 
-* Code can be found at `c-code/unprotected_ex1.c`
+* Code can be found at `code/list1/c-code/ex1/unprotected_ex1.c`
 
 
-```{c, eval=FALSE, code = readLines(here::here("c-code/unprotected_ex1.c"))}
+```{c, eval=FALSE, code = readLines(here::here("code/list1/c-code/ex1/unprotected_ex1.c"))}
 
 ```
 
@@ -56,10 +56,10 @@ In this problem let us compare two versions of a program that's supposed to  cou
 
 ### Protected version
 
-* Code can be found at `c-code/protected_ex1.c`
+* Code can be found at `code/list1/c-code/ex1/protected_ex1.c`
 
 
-```{c, eval=FALSE, code = readLines(here::here("c-code/protected_ex1.c"))}
+```{c, eval=FALSE, code = readLines(here::here("code/list1/c-code/ex1//protected_ex1.c"))}
 
 ```
 
@@ -100,7 +100,7 @@ Metrics:
 ### Load Data
 
 ```{r}
-read_csv(here::here("output/perf_result.csv"),
+read_csv(here::here("output/list1/ex1/perf_result.csv"),
          progress = F,
          col_types = cols(
            RSS = col_integer(),
@@ -299,7 +299,7 @@ inv_sw.diff %>%
 
 <br>
 
-* Code can be found at `java-code/src/list-1/ex_02`
+* Code can be found at `code/list1/java-code/ex2/`
 
 <br>
 
@@ -320,9 +320,9 @@ inv_sw.diff %>%
 
 <br>
 
-* Code can be found at `c-code/returns_first_ex3.c`
+* Code can be found at `code/list1/c-code/ex3/returns_first_ex3.c`
 
-```{c, eval=FALSE, code = readLines(here::here("c-code/returns_first_ex3.c"))}
+```{c, eval=FALSE, code = readLines(here::here("code/list1/c-code/ex3/returns_first_ex3.c"))}
 
 ```
 
@@ -332,9 +332,9 @@ inv_sw.diff %>%
 
 <br>
 
-* Code can be found at `c-code/returns_combined_ex3.c`
+* Code can be found at `code/list1/c-code/ex3/returns_combined_ex3.c`
 
-```{c, eval=FALSE, code = readLines(here::here("c-code/returns_combined_ex3.c"))}
+```{c, eval=FALSE, code = readLines(here::here("code/list1/c-code/ex3/returns_combined_ex3.c"))}
 
 ```
 
@@ -349,14 +349,14 @@ inv_sw.diff %>%
 <br>
 
 * Code can be found at :
-  + `java-code/src/list-1/ex_03/first_return/Main.java`
-  + `java-code/src/list-1/ex_03/first_return/Requester.java`
+  + `code/list1/java-code/ex3/first_return/Main.java`
+  + `code/list1/java-code/ex3/first_return/Requester.java`
 
 <br>
 
 #### Requester
 
-```{r, eval=FALSE, code = readLines(here::here("java-code/src/list-1/ex_03/first_return/Requester.java"))}
+```{r, eval=FALSE, code = readLines(here::here("code/list1/java-code/ex3/first_return/Requester.java"))}
 
 ```
 
@@ -364,7 +364,7 @@ inv_sw.diff %>%
 
 #### Main
 
-```{r, eval=FALSE, code = readLines(here::here("java-code/src/list-1/ex_03/first_return/Main.java"))}
+```{r, eval=FALSE, code = readLines(here::here("code/list1/java-code/ex3/first_return/Main.java"))}
 
 ```
 
@@ -373,15 +373,15 @@ inv_sw.diff %>%
 <br>
 
 * Code can be found at :
-  + `java-code/src/list-1/ex_03/combined_return/CombinedRequester.java`
-  + `java-code/src/list-1/ex_03/combined_return/CombinedMain.java`
+  + `code/list1/java-code/ex3/combined_return/CombinedRequester.java`
+  + `code/list1/java-code/ex3/combined_return/CombinedMain.java`
 
 
 <br>
 
 #### Requester
 
-```{r, eval=FALSE, code = readLines(here::here("java-code/src/list-1/ex_03/combined_return/CombinedRequester.java"))}
+```{r, eval=FALSE, code = readLines(here::here("code/list1/java-code/ex3/combined_return/CombinedRequester.java"))}
 
 ```
 
@@ -389,7 +389,7 @@ inv_sw.diff %>%
 
 #### Main
 
-```{r, eval=FALSE, code = readLines(here::here("java-code/src/list-1/ex_03/combined_return/CombinedMain.java"))}
+```{r, eval=FALSE, code = readLines(here::here("code/list1/java-code/ex3/combined_return/CombinedMain.java"))}
 
 ```
 
@@ -412,9 +412,9 @@ inv_sw.diff %>%
 
 <br>
 
-* Code can be found at `c-code/returns_first_ex4.c`
+* Code can be found at `code/list1/c-code/ex4/returns_first_ex4.c`
 
-```{c, eval=FALSE, code = readLines(here::here("c-code/returns_first_ex4.c"))}
+```{c, eval=FALSE, code = readLines(here::here("code/list1/c-code/ex4/returns_first_ex4.c"))}
 
 ```
 
@@ -424,9 +424,9 @@ inv_sw.diff %>%
 
 <br>
 
-* Code can be found at `c-code/returns_combined_ex4.c`
+* Code can be found at `code/list1/c-code/ex4/returns_combined_ex4.c`
 
-```{c, eval=FALSE, code = readLines(here::here("c-code/returns_combined_ex4.c"))}
+```{c, eval=FALSE, code = readLines(here::here("code/list1/c-code/ex4/returns_combined_ex4.c"))}
 
 ```
 
@@ -440,11 +440,11 @@ inv_sw.diff %>%
 
 <br>
 
-* Code can be found at `java-code/src/list-1/ex_04/ReturnFirst.java`
+* Code can be found at `code/list1/java-code/ex4/ReturnFirst.java`
 
 <br>
 
-```{r, eval=FALSE, code = readLines(here::here("java-code/src/list-1/ex_04/ReturnFirst.java"))}
+```{r, eval=FALSE, code = readLines(here::here("code/list1/java-code/ex4/ReturnFirst.java"))}
 
 ```
 
@@ -453,12 +453,12 @@ inv_sw.diff %>%
 
 <br>
 
-* Code can be found at `java-code/src/list-1/ex_04/ReturnFirstCombined.java`
+* Code can be found at `code/list1/java-code/ex4/ReturnFirstCombined.java`
 
 <br>
 
 
-```{r, eval=FALSE, code = readLines(here::here("java-code/src/list-1/ex_04/ReturnFirstCombined.java"))}
+```{r, eval=FALSE, code = readLines(here::here("code/list1/java-code/ex4/ReturnFirstCombined.java"))}
 
 ```
 
@@ -502,9 +502,9 @@ Metrics:
 
 ## Implementation
 
-* Code used to generate dataset can be found at `java-code/src/list-1/ex_05/Main.java`
+* Code used to generate dataset can be found at `code/list1/java-code/ex5/Main.java`
 
-```{c, eval=FALSE, code = readLines(here::here("java-code/src/list-1/ex_05/Main.java"))}
+```{c, eval=FALSE, code = readLines(here::here("code/list1/java-code/ex5/Main.java"))}
 
 ```
 
@@ -515,7 +515,7 @@ Metrics:
 <br>
 
 ```{r}
-read_csv(here::here("output/report.csv"),
+read_csv(here::here("output/list1/ex5/report.csv"),
          col_types = cols(
            class = col_character(),
            elements = col_integer(),
